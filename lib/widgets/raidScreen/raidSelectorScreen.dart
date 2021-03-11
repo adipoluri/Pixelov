@@ -4,41 +4,80 @@ import 'package:flutter/widgets.dart';
 class RaidSelectorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/images/raid.png"),
-          fit: BoxFit.cover,
+    double width = MediaQuery.of(context).size.width - 50;
+    double height = (MediaQuery.of(context).size.height / 3) - 180;
+
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/raid.png"),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          //raidButton(),
-          //raidButton(),
-          //raidButton(),
-        ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.arrow_back),
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  )
+                ],
+              ),
+              Wrap(
+                runSpacing: 8,
+                children: [
+                  raidButton(
+                    context,
+                    "Scav Run",
+                    width,
+                    height,
+                  ),
+                  raidButton(
+                    context,
+                    "PMC Run",
+                    width,
+                    height,
+                  ),
+                  raidButton(
+                    context,
+                    "Bad Lands",
+                    width,
+                    height,
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
 
   ElevatedButton raidButton(
-      BuildContext context, String title, double width, Widget widget) {
+      BuildContext context, String title, double width, double height) {
     return ElevatedButton(
       onPressed: () {
         //Navigator.push(context, transitionRoute(widget));
       },
+      style: ElevatedButton.styleFrom(
+        primary: Color(0x1AFFFFFF), // background
+        onPrimary: Color(0xFFFFFFFF), // foreground
+      ),
       child: Container(
         width: width,
-        decoration: BoxDecoration(
-          color: Color(0x1AC9C9C9),
-          borderRadius: BorderRadius.all(Radius.circular(1)),
-        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+              padding: EdgeInsets.fromLTRB(0, height, 0, height),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

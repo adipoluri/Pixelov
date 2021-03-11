@@ -13,22 +13,20 @@ class MainMenu extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 200, 0, 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Wrap(
-                runSpacing: 16,
-                children: [
-                  dirButton(context, 'Raid', width, RaidSelectorScreen()),
-                  dirButton(context, 'Inventory', width, RaidSelectorScreen()),
-                  dirButton(context, 'Market', width, RaidSelectorScreen()),
-                ],
-              ),
-            ],
-          ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 200, 0, 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Wrap(
+              runSpacing: 16,
+              children: [
+                dirButton(context, 'Raid', width, RaidSelectorScreen()),
+                dirButton(context, 'Inventory', width, RaidSelectorScreen()),
+                dirButton(context, 'Market', width, RaidSelectorScreen()),
+              ],
+            ),
+          ],
         ),
       ),
     );
