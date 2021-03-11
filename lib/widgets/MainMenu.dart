@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart ';
+import 'package:pixelov/widgets/raidScreen/raidSelectorScreen.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -21,9 +22,9 @@ class MainMenu extends StatelessWidget {
               Wrap(
                 runSpacing: 16,
                 children: [
-                  modeButton('Raid', width),
-                  modeButton('Inventory', width),
-                  modeButton('Market', width),
+                  dirButton(context, 'Raid', width, RaidSelectorScreen()),
+                  dirButton(context, 'Inventory', width, RaidSelectorScreen()),
+                  dirButton(context, 'Market', width, RaidSelectorScreen()),
                 ],
               ),
             ],
@@ -33,14 +34,18 @@ class MainMenu extends StatelessWidget {
     );
   }
 
-  GestureDetector modeButton(String title, double width) {
-    return GestureDetector(
+  ElevatedButton dirButton(
+      BuildContext context, String title, double width, Widget widget) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(context, transitionRoute(widget));
+      },
+      style: ElevatedButton.styleFrom(
+        primary: Color(0x1AFFFFFF), // background
+        onPrimary: Color(0xFFFFFFFF), // foreground
+      ),
       child: Container(
         width: width,
-        decoration: BoxDecoration(
-          color: Color(0x1AC9C9C9),
-          borderRadius: BorderRadius.all(Radius.circular(1)),
-        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -65,6 +70,18 @@ class MainMenu extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Route transitionRoute(Widget widget) {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => widget,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      },
     );
   }
 }

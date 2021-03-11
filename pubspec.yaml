@@ -49,6 +49,7 @@ flutter:
 
     #images
     - assets/images/title.png
+    - assets/images/raid.png
  
   fonts:
 
