@@ -44,6 +44,7 @@ class MainMenu extends StatelessWidget {
                     Navigator.push(context, transitionRoute(InfoScreen()));
                   },
                 ),
+                rewardButton(context),
                 FloatingActionButton(
                   child: Icon(Icons.settings),
                   backgroundColor: Colors.black,
@@ -110,6 +111,19 @@ class MainMenu extends StatelessWidget {
           opacity: animation,
           child: child,
         );
+      },
+    );
+  }
+
+  FloatingActionButton rewardButton(BuildContext context) {
+    //TODO: add Daily Gift Changes
+    return FloatingActionButton(
+      child: Icon(Icons.redeem),
+      backgroundColor: Colors.yellow,
+      foregroundColor: Colors.black,
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SettingsScreen()));
       },
     );
   }
