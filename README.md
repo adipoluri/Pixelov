@@ -1,16 +1,9 @@
 # Pixelov
 
-A new Flutter project.
+[![Powered by Flame](https://img.shields.io/badge/Powered%20by-%F0%9F%94%A5-orange.svg)](https://flame-engine.org)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Pixelov is a fan-made mobile idle game based off of the popular PC game, Escape from Tarkov.s
+This project is an old project I decided to revive and remake using Flutter!
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
