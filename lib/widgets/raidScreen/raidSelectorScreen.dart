@@ -39,19 +39,17 @@ class RaidSelectorScreen extends StatelessWidget {
                     "Scav Run",
                     width,
                     height,
+                    'assets/images/scavbutton.png',
                   ),
                   raidButton(
                     context,
                     "PMC Run",
                     width,
                     height,
+                    'assets/images/raidbutton.png',
                   ),
-                  raidButton(
-                    context,
-                    "Bad Lands",
-                    width,
-                    height,
-                  ),
+                  raidButton(context, "Bad Lands", width, height,
+                      'assets/images/badlandsbutton.png'),
                 ],
               )
             ],
@@ -61,8 +59,8 @@ class RaidSelectorScreen extends StatelessWidget {
     );
   }
 
-  ElevatedButton raidButton(
-      BuildContext context, String title, double width, double height) {
+  ElevatedButton raidButton(BuildContext context, String title, double width,
+      double height, String path) {
     return ElevatedButton(
       onPressed: () {
         //Navigator.push(context, transitionRoute(widget));
@@ -73,6 +71,14 @@ class RaidSelectorScreen extends StatelessWidget {
       ),
       child: Container(
         width: width,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            colorFilter: new ColorFilter.mode(
+                Colors.black.withOpacity(0.2), BlendMode.dstATop),
+            image: AssetImage(path),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
