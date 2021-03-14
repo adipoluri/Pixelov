@@ -74,7 +74,7 @@ class RaidSelectorScreen extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             colorFilter: new ColorFilter.mode(
-                Colors.black.withOpacity(0.2), BlendMode.dstATop),
+                Colors.black.withOpacity(0.7), BlendMode.dstATop),
             image: AssetImage(path),
             fit: BoxFit.cover,
           ),

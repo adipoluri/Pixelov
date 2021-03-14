@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "379862209707",
+    "project_id": "pixelov-6cbc5",
+    "storage_bucket": "pixelov-6cbc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379862209707:android:57dce977646e1b7ebad3ee",
+        "android_client_info": {
+          "package_name": "com.adipoluri.pixelov"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379862209707-cqali63mdtmf6vjsuvhc4vstqajk5j6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfc4aVHfWBFKQrJwoB4C_6ApTG1fN9iN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379862209707-cqali63mdtmf6vjsuvhc4vstqajk5j6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -37,6 +37,7 @@ class MainMenu extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 FloatingActionButton(
+                  heroTag: 'information',
                   child: Icon(Icons.info),
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
@@ -46,6 +47,7 @@ class MainMenu extends StatelessWidget {
                 ),
                 rewardButton(context),
                 FloatingActionButton(
+                  heroTag: 'settings',
                   child: Icon(Icons.settings),
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
@@ -118,6 +120,7 @@ class MainMenu extends StatelessWidget {
   FloatingActionButton rewardButton(BuildContext context) {
     //TODO: add Daily Gift Changes
     return FloatingActionButton(
+      heroTag: "daily",
       child: Icon(Icons.redeem),
       backgroundColor: Colors.yellow,
       foregroundColor: Colors.black,
