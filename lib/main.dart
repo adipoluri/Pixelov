@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:pixelov/core/authenticationService.dart';
 import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyApp());
 
@@ -68,9 +70,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
     if (!_initialised) {
       return Container(
-        color: Colors.white,
+        color: Colors.grey,
         child: Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(
+            backgroundColor: Colors.black38,
+          ),
         ),
       );
     }
@@ -106,11 +110,41 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (auth.FirebaseAuth.instance.currentUser != null && currentUser != null) {
-      if (state == AppLifecycleState.paused) {
-      } else if (state == AppLifecycleState.resumed) {}
+  void didChangeAppLifecycleState(AppLifecycleState state) {}
+}
+
+class AuthenticationWrapper extends StatefulWidget {
+  @override
+  _AuthenticationWrapperState createState() => _AuthenticationWrapperState();
+}
+
+class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
+  Future authenticate() async {
+    final firebaseUser = context.watch<User>();
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    if (firebaseUser != null) {
+      User user = await FireStoreUtils().getCurrentUser(firebaseUser.uid);
     }
+    return Text("Not signed in");
+  }
+
+  @override
+  void initState() {
+    authenticate();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey,
+      body: Center(
+        child: CircularProgressIndicator(
+          backgroundColor: Colors.black38,
+        ),
+      ),
+    );
   }
 }
 
