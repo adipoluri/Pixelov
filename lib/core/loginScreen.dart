@@ -44,7 +44,8 @@ class _LoginScreen extends State<LoginScreen> {
                 style: TextStyle(
                     color: Color(COLOR_PRIMARY),
                     fontSize: 25.0,
-                    fontWeight: FontWeight.bold),
+                    fontFamily: 'Minecraft',
+                    fontWeight: FontWeight.normal),
               ),
             ),
             ConstrainedBox(
@@ -126,7 +127,10 @@ class _LoginScreen extends State<LoginScreen> {
                   ),
                   child: Text(
                     'Log In',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'Minecraft',
+                        fontWeight: FontWeight.normal),
                   ),
                   onPressed: () async {
                     await login();

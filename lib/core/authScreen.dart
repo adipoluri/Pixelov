@@ -27,8 +27,9 @@ class AuthScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Color(COLOR_PRIMARY),
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold),
+                  fontSize: 32.0,
+                  fontFamily: 'Minecraft',
+                  fontWeight: FontWeight.normal),
             ),
           ),
           Padding(
@@ -46,7 +47,10 @@ class AuthScreen extends StatelessWidget {
                 ),
                 child: Text(
                   'Log In',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'Minecraft',
+                      fontWeight: FontWeight.normal),
                 ),
                 onPressed: () => push(context, new LoginScreen()),
               ),
@@ -62,7 +66,8 @@ class AuthScreen extends StatelessWidget {
                   'Sign Up',
                   style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.normal,
+                      fontFamily: 'Minecraft',
                       color: Color(COLOR_PRIMARY)),
                 ),
                 onPressed: () => push(context, new SignUpScreen()),

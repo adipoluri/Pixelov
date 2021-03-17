@@ -50,7 +50,8 @@ class _SignUpState extends State<SignUpScreen> {
             'Create new account',
             style: TextStyle(
                 color: Color(COLOR_PRIMARY),
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.normal,
+                fontFamily: 'Minecraft',
                 fontSize: 25.0),
           ),
         ),
@@ -162,7 +163,10 @@ class _SignUpState extends State<SignUpScreen> {
               ),
               child: Text(
                 'Sign Up',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Minecraft',
+                    fontWeight: FontWeight.normal),
               ),
               onPressed: _sendToServer,
             ),
