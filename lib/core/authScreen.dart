@@ -8,6 +8,7 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(COLOR_PRIMARY),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -16,7 +17,7 @@ class AuthScreen extends StatelessWidget {
             child: Icon(
               Icons.api,
               size: 150,
-              color: Colors.grey,
+              color: Colors.white,
             ),
           ),
           Padding(
@@ -26,7 +27,7 @@ class AuthScreen extends StatelessWidget {
               'Welcome to Pixelov!',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Color(COLOR_PRIMARY),
+                  color: Colors.white,
                   fontSize: 32.0,
                   fontFamily: 'Minecraft',
                   fontWeight: FontWeight.normal),
@@ -43,7 +44,7 @@ class AuthScreen extends StatelessWidget {
                   padding: EdgeInsets.only(top: 12, bottom: 12),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
-                      side: BorderSide(color: Color(COLOR_PRIMARY))),
+                      side: BorderSide(color: Colors.white)),
                 ),
                 child: Text(
                   'Log In',
@@ -72,6 +73,7 @@ class AuthScreen extends StatelessWidget {
                 ),
                 onPressed: () => push(context, new SignUpScreen()),
                 style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
                   padding: EdgeInsets.only(top: 12, bottom: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),

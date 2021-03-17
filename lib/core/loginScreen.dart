@@ -26,6 +26,7 @@ class _LoginScreen extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(COLOR_PRIMARY),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.black),
@@ -42,7 +43,7 @@ class _LoginScreen extends State<LoginScreen> {
               child: Text(
                 'Sign In',
                 style: TextStyle(
-                    color: Color(COLOR_PRIMARY),
+                    color: Colors.white,
                     fontSize: 25.0,
                     fontFamily: 'Minecraft',
                     fontWeight: FontWeight.normal),
@@ -61,17 +62,17 @@ class _LoginScreen extends State<LoginScreen> {
                     email = val;
                   },
                   onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
-                  style: TextStyle(fontSize: 18.0),
+                  style: TextStyle(fontSize: 18.0, color: Colors.white),
                   keyboardType: TextInputType.emailAddress,
-                  cursorColor: Color(COLOR_PRIMARY),
+                  cursorColor: Colors.white,
                   decoration: InputDecoration(
                     contentPadding: new EdgeInsets.only(left: 16, right: 16),
                     fillColor: Colors.white,
                     hintText: 'E-mail Address',
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25.0),
-                        borderSide: BorderSide(
-                            color: Color(COLOR_PRIMARY), width: 2.0)),
+                        borderSide:
+                            BorderSide(color: Colors.white, width: 2.0)),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                     ),
@@ -95,16 +96,16 @@ class _LoginScreen extends State<LoginScreen> {
                   },
                   obscureText: true,
                   textInputAction: TextInputAction.done,
-                  style: TextStyle(fontSize: 18.0),
-                  cursorColor: Color(COLOR_PRIMARY),
+                  style: TextStyle(fontSize: 18.0, color: Colors.white),
+                  cursorColor: Colors.white,
                   decoration: InputDecoration(
                     contentPadding: new EdgeInsets.only(left: 16, right: 16),
                     fillColor: Colors.white,
                     hintText: 'Password',
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25.0),
-                        borderSide: BorderSide(
-                            color: Color(COLOR_PRIMARY), width: 2.0)),
+                        borderSide:
+                            BorderSide(color: Colors.white, width: 2.0)),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                     ),
@@ -123,7 +124,7 @@ class _LoginScreen extends State<LoginScreen> {
                     padding: EdgeInsets.only(top: 12, bottom: 12),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25.0),
-                        side: BorderSide(color: Color(COLOR_PRIMARY))),
+                        side: BorderSide(color: Colors.white)),
                   ),
                   child: Text(
                     'Log In',

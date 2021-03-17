@@ -23,6 +23,7 @@ class _SignUpState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(COLOR_PRIMARY),
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
@@ -49,7 +50,7 @@ class _SignUpState extends State<SignUpScreen> {
           child: Text(
             'Create new account',
             style: TextStyle(
-                color: Color(COLOR_PRIMARY),
+                color: Colors.white,
                 fontWeight: FontWeight.normal,
                 fontFamily: 'Minecraft',
                 fontSize: 25.0),
@@ -67,6 +68,7 @@ class _SignUpState extends State<SignUpScreen> {
               onSaved: (String val) {
                 email = val;
               },
+              style: TextStyle(fontSize: 18.0, color: Colors.white),
               decoration: InputDecoration(
                 contentPadding:
                     new EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -74,8 +76,7 @@ class _SignUpState extends State<SignUpScreen> {
                 hintText: 'Email Address',
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
-                    borderSide:
-                        BorderSide(color: Color(COLOR_PRIMARY), width: 2.0)),
+                    borderSide: BorderSide(color: Colors.white, width: 2.0)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
@@ -96,8 +97,9 @@ class _SignUpState extends State<SignUpScreen> {
               onSaved: (String val) {
                 password = val;
               },
-              style: TextStyle(height: 0.8, fontSize: 18.0),
-              cursorColor: Color(COLOR_PRIMARY),
+              style:
+                  TextStyle(height: 0.8, fontSize: 18.0, color: Colors.white),
+              cursorColor: Colors.white,
               decoration: InputDecoration(
                 contentPadding:
                     new EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -105,8 +107,7 @@ class _SignUpState extends State<SignUpScreen> {
                 hintText: 'Password',
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
-                    borderSide:
-                        BorderSide(color: Color(COLOR_PRIMARY), width: 2.0)),
+                    borderSide: BorderSide(color: Colors.white, width: 2.0)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
@@ -129,8 +130,9 @@ class _SignUpState extends State<SignUpScreen> {
               onSaved: (String val) {
                 confirmPassword = val;
               },
-              style: TextStyle(height: 0.8, fontSize: 18.0),
-              cursorColor: Color(COLOR_PRIMARY),
+              style:
+                  TextStyle(height: 0.8, fontSize: 18.0, color: Colors.white),
+              cursorColor: Colors.white,
               decoration: InputDecoration(
                 contentPadding:
                     new EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -138,8 +140,7 @@ class _SignUpState extends State<SignUpScreen> {
                 hintText: 'Confirm Password',
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
-                    borderSide:
-                        BorderSide(color: Color(COLOR_PRIMARY), width: 2.0)),
+                    borderSide: BorderSide(color: Colors.white, width: 2.0)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
@@ -159,7 +160,7 @@ class _SignUpState extends State<SignUpScreen> {
                 padding: EdgeInsets.only(top: 12, bottom: 12),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),
-                    side: BorderSide(color: Color(COLOR_PRIMARY))),
+                    side: BorderSide(color: Colors.white)),
               ),
               child: Text(
                 'Sign Up',

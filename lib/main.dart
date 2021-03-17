@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:pixelov/constants.dart';
 import 'package:pixelov/core/authScreen.dart';
 import 'package:pixelov/core/authenticationService.dart';
 import 'package:pixelov/core/helpers.dart';
@@ -79,10 +80,20 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
     if (!_initialised) {
       return Container(
-        color: Colors.white,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/launch.png"),
+            fit: BoxFit.fill,
+          ),
+        ),
         child: Center(
-          child: CircularProgressIndicator(
-            backgroundColor: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
+            child: CircularProgressIndicator(
+              strokeWidth: 5,
+              valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+              backgroundColor: Color(COLOR_PRIMARY),
+            ),
           ),
         ),
       );
@@ -138,10 +149,20 @@ class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
     final firebaseUser = context.watch<auth.User>();
     if (!_ready) {
       return Container(
-        color: Colors.white,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/launch.png"),
+            fit: BoxFit.fill,
+          ),
+        ),
         child: Center(
-          child: CircularProgressIndicator(
-            backgroundColor: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
+            child: CircularProgressIndicator(
+              strokeWidth: 5,
+              valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+              backgroundColor: Color(COLOR_PRIMARY),
+            ),
           ),
         ),
       );
