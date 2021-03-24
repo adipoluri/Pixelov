@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pixelov/core/authScreen.dart';
-import 'package:pixelov/core/authenticationService.dart';
-import 'package:pixelov/core/helpers.dart';
+import 'package:pixelov/core/authService.dart';
+import 'package:pixelov/extras/helpers.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override

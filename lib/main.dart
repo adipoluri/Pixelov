@@ -1,18 +1,17 @@
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:pixelov/constants.dart';
+import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/core/authScreen.dart';
-import 'package:pixelov/core/authenticationService.dart';
-import 'package:pixelov/core/helpers.dart';
+import 'package:pixelov/core/dbHandler.dart';
+import 'package:pixelov/core/authService.dart';
+import 'package:pixelov/extras/helpers.dart';
+import 'package:pixelov/model/time.dart';
 import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pixelov/model/user.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,20 +21,18 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> with WidgetsBindingObserver {
-  static User currentUser;
+  static DBHandler dBhandler = new DBHandler();
   StreamSubscription tokenStream;
 
   bool _initialised = false;
   bool _error = false;
 
-  Future<String> timer() {
-    return new Future.delayed(const Duration(seconds: 1), () => "1");
-  }
-
   void initialiseFlutterFire() async {
     try {
       await Firebase.initializeApp();
+      await dBhandler.initDB();
       await timer();
+
       setState(() {
         _initialised = true;
       });
@@ -130,7 +127,24 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {}
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (auth.FirebaseAuth.instance.currentUser != null &&
+        DBHandler.currentUser != null) {
+      if (state == AppLifecycleState.paused) {
+        //user offline
+        tokenStream.pause();
+        DBHandler.currentUser.active = false;
+        DBHandler.currentUser.lastOnlineTimestamp = new Time(
+            DateTime.now().month, DateTime.now().day, DateTime.now().year);
+        dBhandler.updateCurrentUser();
+      } else if (state == AppLifecycleState.resumed) {
+        //user online
+        tokenStream.resume();
+        DBHandler.currentUser.active = true;
+        dBhandler.updateCurrentUser();
+      }
+    }
+  }
 }
 
 //Handles pathing between auth and main app
@@ -140,9 +154,9 @@ class AuthenticationWrapper extends StatefulWidget {
 }
 
 class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
-  Widget mainWidget;
   final firebaseUser = null;
   bool _ready = false;
+  Widget mainWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -181,7 +195,10 @@ class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
   }
 
   void waitForUser() async {
-    await Future.delayed(const Duration(seconds: 1), () => "1");
+    await timer();
+    if (firebaseUser != null) {
+      MyAppState.dBhandler.setCurrentUser();
+    }
     setState(() {
       _ready = true;
     });

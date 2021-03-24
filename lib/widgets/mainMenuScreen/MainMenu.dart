@@ -2,6 +2,7 @@ import 'package:flutter/material.dart ';
 import 'package:pixelov/widgets/hideoutScreen/hideoutScreen.dart';
 import 'package:pixelov/widgets/infoScreen/infoScreen.dart';
 import 'package:pixelov/widgets/inventoryScreen/inventoryScreen.dart';
+import 'package:pixelov/widgets/mainMenuScreen/dailyReward.dart';
 import 'package:pixelov/widgets/marketScreen/marketScreen.dart';
 import 'package:pixelov/widgets/raidScreen/RaidSelectorScreen.dart';
 import 'package:pixelov/widgets/settingsScreen/settingsScreen.dart';
@@ -125,8 +126,10 @@ class MainMenu extends StatelessWidget {
       backgroundColor: Colors.yellow,
       foregroundColor: Colors.black,
       onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SettingsScreen()));
+        showDialog(
+          context: context,
+          builder: (context) => DailyRewardWidget(),
+        );
       },
     );
   }

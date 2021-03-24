@@ -82,3 +82,7 @@ showAlertDialog(BuildContext context, String title, String content) {
     },
   );
 }
+
+Future<String> timer() {
+  return new Future.delayed(const Duration(seconds: 1), () => "1");
+}

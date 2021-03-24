@@ -1,12 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:pixelov/constants.dart';
-import 'package:pixelov/core/authenticationService.dart';
-import 'package:pixelov/core/helpers.dart';
+import 'package:pixelov/extras/constants.dart';
+import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
 import 'package:pixelov/model/user.dart';
 import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
@@ -164,17 +162,14 @@ class _LoginScreen extends State<LoginScreen> {
       auth.UserCredential result = await auth.FirebaseAuth.instance
           .signInWithEmailAndPassword(
               email: email.trim(), password: password.trim());
-      DocumentSnapshot documentSnapshot = await FireStoreUtils.firestore
-          .collection('users')
-          .doc(result.user.uid)
-          .get();
-      User user;
-      if (documentSnapshot != null && documentSnapshot.exists) {
-        user = User.fromJson(documentSnapshot.data());
-        user.active = true;
-        //await FireStoreUtils.updateCurrentUser(user);
-        MyAppState.currentUser = user;
-      }
+
+      User user = User(
+        email: email,
+        userID: result.user.uid,
+        active: true,
+      );
+      await MyAppState.dBhandler.updateUser(user);
+
       return user;
     } on auth.FirebaseAuthException catch (exception) {
       switch ((exception).code) {

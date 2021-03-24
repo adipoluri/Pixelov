@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pixelov/constants.dart';
-import 'package:pixelov/core/helpers.dart';
+import 'package:pixelov/extras/constants.dart';
+import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/core/loginScreen.dart';
 import 'package:pixelov/core/signUpScreen.dart';
 
