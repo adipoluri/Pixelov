@@ -4,7 +4,7 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:pixelov/model/time.dart';
 import 'package:pixelov/model/user.dart';
-import 'package:pixelov/widgets/mainMenuScreen/dailyReward.dart';
+import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 class DBHandler {
   static User currentUser;
@@ -12,10 +12,10 @@ class DBHandler {
 
   initDB() async {
     await Hive.initFlutter();
-    box = await Hive.openBox('currentUser');
     Hive.registerAdapter(UserAdapter());
     Hive.registerAdapter(TimeAdapter());
     Hive.registerAdapter(DailyAdapter());
+    box = await Hive.openBox('currentUser');
   }
 
   updateUser(User user) async {

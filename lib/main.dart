@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> with WidgetsBindingObserver {
-  static DBHandler dBhandler = new DBHandler();
+  static DBHandler dBhandler;
   StreamSubscription tokenStream;
 
   bool _initialised = false;
@@ -29,6 +29,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   void initialiseFlutterFire() async {
     try {
+      dBhandler = new DBHandler();
       await Firebase.initializeApp();
       await dBhandler.initDB();
       await timer();
@@ -182,6 +183,7 @@ class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
       );
     }
     if (firebaseUser != null) {
+      MyAppState.dBhandler.setCurrentUser();
       return MainMenu();
     } else {
       return AuthScreen();
@@ -196,9 +198,6 @@ class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
 
   void waitForUser() async {
     await timer();
-    if (firebaseUser != null) {
-      MyAppState.dBhandler.setCurrentUser();
-    }
     setState(() {
       _ready = true;
     });

@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:pixelov/model/time.dart';
-import 'package:pixelov/widgets/mainMenuScreen/dailyReward.dart';
+import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 part 'user.g.dart';
 

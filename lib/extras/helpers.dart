@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixelov/extras/constants.dart';
 
 String validateName(String value) {
   String pattern = r'(^[a-zA-Z ]*$)';
@@ -64,10 +65,12 @@ showAlertDialog(BuildContext context, String title, String content) {
     },
   );
   AlertDialog alert = AlertDialog(
+    backgroundColor: Colors.grey,
     title: Text(title),
     content: Text(
       content,
       textAlign: TextAlign.center,
+      style: TextStyle(color: Color(COLOR_PRIMARY)),
     ),
     actions: [
       okButton,

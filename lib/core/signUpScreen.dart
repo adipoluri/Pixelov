@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pixelov/extras/constants.dart';
-import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
 import 'package:pixelov/model/user.dart';

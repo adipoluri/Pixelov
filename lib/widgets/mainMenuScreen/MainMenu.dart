@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart ';
+import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/widgets/hideoutScreen/hideoutScreen.dart';
 import 'package:pixelov/widgets/infoScreen/infoScreen.dart';
 import 'package:pixelov/widgets/inventoryScreen/inventoryScreen.dart';
-import 'package:pixelov/widgets/mainMenuScreen/dailyReward.dart';
+import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 import 'package:pixelov/widgets/marketScreen/marketScreen.dart';
 import 'package:pixelov/widgets/raidScreen/RaidSelectorScreen.dart';
 import 'package:pixelov/widgets/settingsScreen/settingsScreen.dart';
@@ -79,28 +80,23 @@ class MainMenu extends StatelessWidget {
       ),
       child: Container(
         width: width,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      decoration: TextDecoration.none,
-                      fontFamily: 'Minecraft',
-                      color: Color(0xFFE9E8D3),
-                      fontSize: 40,
-                    ),
-                  ),
-                ],
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Minecraft',
+                  color: Color(0xFFE9E8D3),
+                  fontSize: 40,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
