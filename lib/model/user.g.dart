@@ -17,11 +17,11 @@ class UserAdapter extends TypeAdapter<User> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return User(
-      lastOnlineTimestamp: fields[0] as dynamic,
+      lastOnlineTimestamp: fields[0] as DateTime,
       email: fields[1] as String,
       userID: fields[2] as String,
       active: fields[4] as bool,
-      daily: fields[5] as dynamic,
+      daily: fields[5] as DailyReward,
     );
   }
 

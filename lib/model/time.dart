@@ -3,7 +3,7 @@ import 'package:hive/hive.dart';
 part 'time.g.dart';
 
 @HiveType(typeId: 3, adapterName: "TimeAdapter")
-class Time {
+class Time extends HiveObject {
   @HiveField(0)
   int month;
   @HiveField(1)

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pixelov/core/authScreen.dart';
 import 'package:pixelov/core/authService.dart';
 import 'package:pixelov/extras/helpers.dart';
+import 'package:pixelov/main.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -17,6 +18,7 @@ class SettingsScreen extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               signOut();
+              MyAppState.dBhandler.clearDb();
               pushAndRemoveUntil(context, new AuthScreen(), false);
             },
             style: ElevatedButton.styleFrom(

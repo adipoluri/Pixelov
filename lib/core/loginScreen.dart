@@ -8,6 +8,7 @@ import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
 import 'package:pixelov/model/user.dart';
 import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
+import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -164,9 +165,11 @@ class _LoginScreen extends State<LoginScreen> {
               email: email.trim(), password: password.trim());
 
       User user = User(
+        lastOnlineTimestamp: DateTime.now(),
         email: email,
         userID: result.user.uid,
         active: true,
+        daily: new DailyReward(lastRewardTimestamp: defaultTime()),
       );
       await MyAppState.dBhandler.updateUser(user);
 

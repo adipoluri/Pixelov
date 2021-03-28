@@ -2,28 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 import 'package:hive/hive.dart';
 import 'package:pixelov/extras/constants.dart';
-import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
-import 'package:pixelov/model/time.dart';
 
 part 'dailyReward.g.dart';
 
 @HiveType(typeId: 2, adapterName: "DailyAdapter")
-class DailyReward {
+class DailyReward extends HiveObject {
   @HiveField(0)
-  Time lastRewardTimestamp;
+  DateTime lastRewardTimestamp;
   @HiveField(1)
   bool collectedToday;
 
   DailyReward({
     this.collectedToday = false,
-    lastRewardTimestamp,
-  }) : this.lastRewardTimestamp = new Time(12, 6, 2001);
+    this.lastRewardTimestamp,
+  });
 
   void setTimeStamp() {
-    DateTime time = DateTime.now();
-    this.lastRewardTimestamp = new Time(time.month, time.day, time.year);
+    this.lastRewardTimestamp = DateTime.now();
   }
 
   bool canCollect() {
@@ -33,11 +30,12 @@ class DailyReward {
   void collect() {
     this.collectedToday = true;
     setTimeStamp();
+    MyAppState.dBhandler.updateUser(MyAppState.dBhandler.currentUser);
   }
 
   void debugResetDaily() {
     this.collectedToday = false;
-    this.lastRewardTimestamp = new Time(12, 6, 2001);
+    this.lastRewardTimestamp = DateTime.now();
   }
 }
 
@@ -60,7 +58,7 @@ class _DailyRewardWidgetState extends State<DailyRewardWidget> {
   }
 
   void isDailyRewardReady() {
-    if (DBHandler.currentUser.daily.canCollect()) {
+    if (MyAppState.dBhandler.currentUser.daily.canCollect()) {
       setState(() {
         _isReady = true;
         _timeLeft = 0;
@@ -176,7 +174,7 @@ class _DailyRewardWidgetState extends State<DailyRewardWidget> {
   ElevatedButton redeemButton(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        DBHandler.currentUser.daily.collect();
+        MyAppState.dBhandler.currentUser.daily.collect();
         isDailyRewardReady();
         showAlertDialog(context, "Daily Reward", "Daily Reward Collected!");
         //TODO: Add random daily reward!

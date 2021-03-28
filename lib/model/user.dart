@@ -1,13 +1,12 @@
 import 'package:hive/hive.dart';
-import 'package:pixelov/model/time.dart';
 import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 part 'user.g.dart';
 
 @HiveType(typeId: 1, adapterName: "UserAdapter")
-class User {
+class User extends HiveObject {
   @HiveField(0)
-  Time lastOnlineTimestamp;
+  DateTime lastOnlineTimestamp;
   @HiveField(1)
   String email;
   @HiveField(2)
@@ -18,12 +17,10 @@ class User {
   DailyReward daily;
 
   User({
-    lastOnlineTimestamp,
+    this.lastOnlineTimestamp,
     this.email = '',
     this.userID = '',
     this.active = false,
-    daily,
-  })  : this.lastOnlineTimestamp = new Time(
-            DateTime.now().month, DateTime.now().day, DateTime.now().year),
-        this.daily = new DailyReward();
+    this.daily,
+  });
 }

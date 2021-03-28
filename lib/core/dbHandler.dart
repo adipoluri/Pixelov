@@ -7,33 +7,39 @@ import 'package:pixelov/model/user.dart';
 import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 class DBHandler {
-  static User currentUser;
-  static Box box;
+  User currentUser;
 
   initDB() async {
     await Hive.initFlutter();
     Hive.registerAdapter(UserAdapter());
     Hive.registerAdapter(TimeAdapter());
     Hive.registerAdapter(DailyAdapter());
-    box = await Hive.openBox('currentUser');
   }
 
   updateUser(User user) async {
-    await box.put('user', user);
+    final box = await Hive.openBox<User>('currentUser');
+    await box.add(user);
     currentUser = user;
   }
 
   updateCurrentUser() async {
-    await box.put('user', currentUser);
+    this.currentUser.save();
     //FireStoreUtils.updateCurrentUser(currentUser);
   }
 
-  User getUser() {
-    return box.get('user');
+  Future<User> getUser() async {
+    final box = await Hive.openBox<User>('currentUser');
+    return box.getAt(0);
   }
 
-  setCurrentUser() {
-    currentUser = box.get('user');
+  setCurrentUser() async {
+    final box = await Hive.openBox<User>('currentUser');
+    currentUser = box.getAt(0);
+  }
+
+  clearDb() async {
+    final box = await Hive.openBox<User>('currentUser');
+    box.deleteAt(0);
   }
 }
 

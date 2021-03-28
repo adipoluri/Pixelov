@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +6,6 @@ import 'package:pixelov/core/authScreen.dart';
 import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/core/authService.dart';
 import 'package:pixelov/extras/helpers.dart';
-import 'package:pixelov/model/time.dart';
 import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +19,7 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> with WidgetsBindingObserver {
   static DBHandler dBhandler;
-  StreamSubscription tokenStream;
+  //StreamSubscription tokenStream;
 
   bool _initialised = false;
   bool _error = false;
@@ -130,18 +127,17 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (auth.FirebaseAuth.instance.currentUser != null &&
-        DBHandler.currentUser != null) {
+        dBhandler.currentUser != null) {
       if (state == AppLifecycleState.paused) {
         //user offline
-        tokenStream.pause();
-        DBHandler.currentUser.active = false;
-        DBHandler.currentUser.lastOnlineTimestamp = new Time(
-            DateTime.now().month, DateTime.now().day, DateTime.now().year);
+        //tokenStream.pause();
+        dBhandler.currentUser.active = false;
+        dBhandler.currentUser.lastOnlineTimestamp = DateTime.now();
         dBhandler.updateCurrentUser();
       } else if (state == AppLifecycleState.resumed) {
         //user online
-        tokenStream.resume();
-        DBHandler.currentUser.active = true;
+        //tokenStream.resume();
+        dBhandler.currentUser.active = true;
         dBhandler.updateCurrentUser();
       }
     }

@@ -18,7 +18,7 @@ class DailyAdapter extends TypeAdapter<DailyReward> {
     };
     return DailyReward(
       collectedToday: fields[1] as bool,
-      lastRewardTimestamp: fields[0] as dynamic,
+      lastRewardTimestamp: fields[0] as DateTime,
     );
   }
 
