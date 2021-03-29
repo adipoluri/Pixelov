@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class RaidSelectorScreen extends StatelessWidget {
+class RaidSelectorScreen extends StatefulWidget {
+  @override
+  _RaidSelectorScreenState createState() => _RaidSelectorScreenState();
+}
+
+class _RaidSelectorScreenState extends State<RaidSelectorScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width - 50;
@@ -48,8 +53,13 @@ class RaidSelectorScreen extends StatelessWidget {
                     height,
                     'assets/images/raidbutton.png',
                   ),
-                  raidButton(context, "Bad Lands", width, height,
-                      'assets/images/badlandsbutton.png'),
+                  raidButton(
+                    context,
+                    "Bad Lands",
+                    width,
+                    height,
+                    'assets/images/badlandsbutton.png',
+                  ),
                 ],
               )
             ],

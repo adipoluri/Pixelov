@@ -18,7 +18,7 @@ class DBHandler {
 
   updateUser(User user) async {
     final box = await Hive.openBox<User>('currentUser');
-    await box.add(user);
+    await box.put("currentUser", user);
     currentUser = user;
   }
 
@@ -29,17 +29,17 @@ class DBHandler {
 
   Future<User> getUser() async {
     final box = await Hive.openBox<User>('currentUser');
-    return box.getAt(0);
+    return box.get("currentUser");
   }
 
   setCurrentUser() async {
     final box = await Hive.openBox<User>('currentUser');
-    currentUser = box.getAt(0);
+    currentUser = box.get("currentUser");
   }
 
   clearDb() async {
     final box = await Hive.openBox<User>('currentUser');
-    box.deleteAt(0);
+    box.delete("currentUser");
   }
 }
 
