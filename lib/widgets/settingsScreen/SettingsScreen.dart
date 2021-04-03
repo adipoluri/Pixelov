@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pixelov/core/authScreen.dart';
 import 'package:pixelov/core/authService.dart';
-import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
-import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatelessWidget {
   static final String path = "lib/src/pages/settings/settings3.dart";
