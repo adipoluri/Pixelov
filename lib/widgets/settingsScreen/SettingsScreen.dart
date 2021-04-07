@@ -64,7 +64,7 @@ class SettingsScreen extends StatelessWidget {
                       MyAppState.dBhandler.currentUser.email,
                       style: subtextStyle,
                     ),
-                    onTap: () {},
+                    onTap: null,
                   ),
                   _buildDivider(),
                   SwitchListTile(

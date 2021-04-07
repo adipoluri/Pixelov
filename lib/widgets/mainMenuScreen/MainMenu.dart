@@ -75,7 +75,8 @@ class MainMenu extends StatelessWidget {
       },
       style: ElevatedButton.styleFrom(
         primary: Color(0x1AFFFFFF), // background
-        onPrimary: Color(0xFFB6A26A), // foreground
+        onPrimary: Color(0xFFB6A26A),
+        elevation: 8, // foreground
       ),
       child: Container(
         width: width,

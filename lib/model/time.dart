@@ -2,23 +2,18 @@ import 'package:hive/hive.dart';
 
 part 'time.g.dart';
 
-@HiveType(typeId: 3, adapterName: "TimeAdapter")
+@HiveType(typeId: 5, adapterName: "TimeAdapter")
 class Time extends HiveObject {
   @HiveField(0)
-  int month;
+  int mins;
   @HiveField(1)
-  int day;
+  int hours;
   @HiveField(2)
-  int year;
+  int days;
 
-  Time(int month, int day, int year) {
-    this.month = month;
-    this.day = day;
-    this.year = year;
-  }
-
-  Time getTimeNow() {
-    return new Time(
-        DateTime.now().month, DateTime.now().day, DateTime.now().year);
-  }
+  Time({
+    this.mins,
+    this.hours,
+    this.days,
+  });
 }

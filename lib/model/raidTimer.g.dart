@@ -1,38 +1,44 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'time.dart';
+part of 'raidTimer.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class TimeAdapter extends TypeAdapter<Time> {
+class RaidTimerAdapter extends TypeAdapter<RaidTimer> {
   @override
-  final int typeId = 5;
+  final int typeId = 4;
 
   @override
-  Time read(BinaryReader reader) {
+  RaidTimer read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Time(
-      mins: fields[0] as int,
-      hours: fields[1] as int,
-      days: fields[2] as int,
+    return RaidTimer(
+      scavTimer: fields[0] as DateTime,
+      scavRaid: fields[1] as bool,
+      pmcTimer: fields[2] as DateTime,
+      pmcRaid: fields[3] as bool,
+      raidDuration: fields[4] as Time,
     );
   }
 
   @override
-  void write(BinaryWriter writer, Time obj) {
+  void write(BinaryWriter writer, RaidTimer obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(5)
       ..writeByte(0)
-      ..write(obj.mins)
+      ..write(obj.scavTimer)
       ..writeByte(1)
-      ..write(obj.hours)
+      ..write(obj.scavRaid)
       ..writeByte(2)
-      ..write(obj.days);
+      ..write(obj.pmcTimer)
+      ..writeByte(3)
+      ..write(obj.pmcRaid)
+      ..writeByte(4)
+      ..write(obj.raidDuration);
   }
 
   @override
@@ -41,7 +47,7 @@ class TimeAdapter extends TypeAdapter<Time> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is TimeAdapter &&
+      other is RaidTimerAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

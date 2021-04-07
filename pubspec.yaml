@@ -56,6 +56,15 @@ flutter:
     - assets/images/scavbutton.png
     - assets/images/badlandsbutton.png
     - assets/images/launch.png
+    - assets/images/customs.png
+    - assets/images/interchange.png
+    - assets/images/factory.png
+    - assets/images/shoreline.png
+    - assets/images/reserve.png
+    - assets/images/labs.png
+    - assets/images/woods.png
+    - assets/images/streets.png
+    
   fonts:
 
     - family: Minecraft

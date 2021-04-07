@@ -89,3 +89,15 @@ showAlertDialog(BuildContext context, String title, String content) {
 Future<String> timer() {
   return new Future.delayed(const Duration(seconds: 1), () => "1");
 }
+
+Route transitionRoute(Widget widget) {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => widget,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return FadeTransition(
+        opacity: animation,
+        child: child,
+      );
+    },
+  );
+}

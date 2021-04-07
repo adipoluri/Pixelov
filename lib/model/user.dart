@@ -1,4 +1,5 @@
 import 'package:hive/hive.dart';
+import 'package:pixelov/model/raidTimer.dart';
 import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 part 'user.g.dart';
@@ -15,6 +16,8 @@ class User extends HiveObject {
   bool active;
   @HiveField(5)
   DailyReward daily;
+  @HiveField(6)
+  RaidTimer raidTimers;
 
   User({
     this.lastOnlineTimestamp,
@@ -22,5 +25,13 @@ class User extends HiveObject {
     this.userID = '',
     this.active = false,
     this.daily,
+    this.raidTimers,
   });
+
+  void updateUser() {
+    //Update DailyReward
+    if (this.daily.lastRewardTimestamp.day != DateTime.now().day) {
+      this.daily.collectedToday = false;
+    }
+  }
 }
