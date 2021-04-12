@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pixelov/core/dbHandler.dart';
+import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/main.dart';
-import 'package:pixelov/widgets/inventoryScreen/InventoryRow.dart';
+import 'package:pixelov/model/item.dart';
+import 'package:pixelov/widgets/inventoryScreen/inventoryRowItem.dart';
 
 class InventorySCreen extends StatelessWidget {
   @override
@@ -48,14 +49,8 @@ class InventorySCreen extends StatelessWidget {
                 itemExtent: 160.0,
                 itemCount:
                     MyAppState.dBhandler.currentUser.inventory.gear.length,
-                itemBuilder: (_, index) => new InventoryRow(),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/raid.png"),
-                  fit: BoxFit.cover,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.GEAR),
                 ),
               ),
             ),
@@ -66,12 +61,12 @@ class InventorySCreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/raid.png"),
-                  fit: BoxFit.cover,
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.weapon.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.WEAPON),
                 ),
               ),
             ),
@@ -82,12 +77,12 @@ class InventorySCreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/raid.png"),
-                  fit: BoxFit.cover,
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.extra.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.EXTRA),
                 ),
               ),
             ),
@@ -98,12 +93,76 @@ class InventorySCreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.food.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.FOOD),
+                ),
+              ),
             ),
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/raid.png"),
                   fit: BoxFit.cover,
+                ),
+              ),
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.junk.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.JUNK),
+                ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/raid.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.key.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.KEY),
+                ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/raid.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.valuables.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.VALUABLES),
+                ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/raid.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount: MyAppState
+                    .dBhandler.currentUser.inventory.unlockable.length,
+                itemBuilder: (_, index) => new InventoryRowItem(
+                  getItem(index, CategoryTypes.UNLOCKABLE),
                 ),
               ),
             ),
@@ -111,5 +170,56 @@ class InventorySCreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Item getItem(int index, int category) {
+    switch (category) {
+      case CategoryTypes.KEY:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.key[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.GEAR:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.gear[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.WEAPON:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.weapon[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.FOOD:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.food[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.EXTRA:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.extra[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.UNLOCKABLE:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.unlockable[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.JUNK:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.junk[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.CURRENCY:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.currency[index].uid,
+            CategoryTypes.GEAR);
+        break;
+      case CategoryTypes.VALUABLES:
+        return MyAppState.dBhandler.getItemObjectWithUid(
+            MyAppState.dBhandler.currentUser.inventory.valuables[index].uid,
+            CategoryTypes.GEAR);
+        break;
+    }
+    return null;
   }
 }

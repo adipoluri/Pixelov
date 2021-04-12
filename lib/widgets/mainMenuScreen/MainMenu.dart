@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart ';
+import 'package:pixelov/main.dart';
 import 'package:pixelov/widgets/hideoutScreen/hideoutScreen.dart';
 import 'package:pixelov/widgets/infoScreen/infoScreen.dart';
 import 'package:pixelov/widgets/inventoryScreen/inventoryScreen.dart';
@@ -44,6 +45,7 @@ class MainMenu extends StatelessWidget {
                   foregroundColor: Colors.white,
                   onPressed: () {
                     Navigator.push(context, transitionRoute(InfoScreen()));
+                    MyAppState.dBhandler.currentUser.addRandomItem();
                   },
                 ),
                 rewardButton(context),

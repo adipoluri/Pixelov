@@ -1,11 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:pixelov/model/item.dart';
 
-class InventoryRow extends StatelessWidget {
-  InventoryRow();
+class InventoryRowItem extends StatelessWidget {
+  final Item item;
+
+  InventoryRowItem(this.item);
 
   @override
   Widget build(BuildContext context) {
+    final inventoryThumbnail = new Container(
+      alignment: new FractionalOffset(0.0, 0.5),
+      margin: const EdgeInsets.only(left: 24.0),
+      child: new Hero(
+        tag: 'inventory-icon-${item.uid}',
+        child: new Image(
+          image:
+              new AssetImage("assets/images/itemImages/" + item.uid + ".png"),
+          height: 100,
+          width: 100,
+        ),
+      ),
+    );
+
     final inventoryCard = new Container(
+      margin: const EdgeInsets.only(left: 72.0, right: 24.0),
       decoration: new BoxDecoration(
         color: Color(0xFF4E4E4E),
         shape: BoxShape.rectangle,
@@ -44,6 +62,7 @@ class InventoryRow extends StatelessWidget {
         child: new Stack(
           children: <Widget>[
             inventoryCard,
+            inventoryThumbnail,
           ],
         ),
       ),

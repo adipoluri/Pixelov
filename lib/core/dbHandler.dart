@@ -9,6 +9,7 @@ import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/model/category.dart';
 import 'package:pixelov/model/raidTimer.dart';
 import 'package:pixelov/model/time.dart';
+import 'package:pixelov/model/item.dart';
 import 'package:pixelov/model/user.dart';
 import 'package:pixelov/model/inventory.dart';
 import 'package:pixelov/model/inventorySlot.dart';
@@ -92,6 +93,10 @@ class DBHandler {
   clearDb() async {
     final box = await Hive.openBox<User>('currentUser');
     box.delete("currentUser");
+  }
+
+  Item getItemObjectWithUid(String uid, int category) {
+    return items[category].items[uid];
   }
 }
 
