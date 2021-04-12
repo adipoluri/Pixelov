@@ -10,6 +10,8 @@ import 'package:pixelov/model/category.dart';
 import 'package:pixelov/model/raidTimer.dart';
 import 'package:pixelov/model/time.dart';
 import 'package:pixelov/model/user.dart';
+import 'package:pixelov/model/inventory.dart';
+import 'package:pixelov/model/inventorySlot.dart';
 import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 class DBHandler {
@@ -22,6 +24,8 @@ class DBHandler {
     Hive.registerAdapter(RaidTimerAdapter());
     Hive.registerAdapter(DailyAdapter());
     Hive.registerAdapter(TimeAdapter());
+    Hive.registerAdapter(InventoryAdapter());
+    Hive.registerAdapter(InventorySlotAdapter());
   }
 
   initData() async {
@@ -43,6 +47,17 @@ class DBHandler {
       raidTimers: new RaidTimer(
         scavTimer: defaultTime(),
         pmcTimer: defaultTime(),
+      ),
+      inventory: new Inventory(
+        key: <InventorySlot>[],
+        gear: <InventorySlot>[],
+        weapon: <InventorySlot>[],
+        food: <InventorySlot>[],
+        extra: <InventorySlot>[],
+        unlockable: <InventorySlot>[],
+        junk: <InventorySlot>[],
+        currency: <InventorySlot>[],
+        valuables: <InventorySlot>[],
       ),
     );
 

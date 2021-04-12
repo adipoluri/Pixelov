@@ -178,6 +178,8 @@ class _DailyRewardWidgetState extends State<DailyRewardWidget> {
         isDailyRewardReady();
         showAlertDialog(context, "Daily Reward", "Daily Reward Collected!");
         //TODO: Add random daily reward!
+        MyAppState.dBhandler.currentUser
+            .addItem("c5b08816-9967-4705-9e4d-84e7fec311b6", 1);
       },
       style: ElevatedButton.styleFrom(
         primary: Color(0xFF474747), // background

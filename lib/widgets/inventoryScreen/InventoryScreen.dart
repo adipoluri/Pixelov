@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/main.dart';
+import 'package:pixelov/widgets/inventoryScreen/InventoryRow.dart';
 
 class InventorySCreen extends StatelessWidget {
   @override
@@ -42,6 +43,12 @@ class InventorySCreen extends StatelessWidget {
                   image: AssetImage("assets/images/raid.png"),
                   fit: BoxFit.cover,
                 ),
+              ),
+              child: new ListView.builder(
+                itemExtent: 160.0,
+                itemCount:
+                    MyAppState.dBhandler.currentUser.inventory.gear.length,
+                itemBuilder: (_, index) => new InventoryRow(),
               ),
             ),
             Container(
