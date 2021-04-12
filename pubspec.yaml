@@ -36,7 +36,8 @@ dependencies:
   hive: ^2.0.0
   hive_flutter: ^1.0.0
   flutter_glow: ^0.2.0
-
+  image: ^3.0.2
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -50,21 +51,12 @@ flutter:
   assets:
 
     #images
-    - assets/images/title.png
-    - assets/images/raid.png
+    - assets/images/
     - assets/images/raidbutton.png
-    - assets/images/scavbutton.png
     - assets/images/badlandsbutton.png
-    - assets/images/launch.png
-    - assets/images/customs.png
-    - assets/images/interchange.png
-    - assets/images/factory.png
-    - assets/images/shoreline.png
-    - assets/images/reserve.png
-    - assets/images/labs.png
-    - assets/images/woods.png
-    - assets/images/streets.png
-    
+    - assets/images/itemImages/
+    - assets/data/items.json
+
   fonts:
 
     - family: Minecraft

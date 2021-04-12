@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const COLOR_PRIMARY = 0xFF4E4E4E;
+const String API_KEY = "maa5OwaDmLmuCx73";
 
 DateTime defaultTime() {
   return new DateTime(2001, 12, 6);
@@ -26,4 +27,16 @@ class TextStyles {
       fontFamily: 'Minecraft',
       fontWeight: FontWeight.w300,
       fontSize: 12.0);
+}
+
+class CategoryTypes {
+  static const int KEY = 1;
+  static const int GEAR = 2;
+  static const int WEAPON = 3;
+  static const int FOOD = 4;
+  static const int EXTRA = 5;
+  static const int UNLOCKABLE = 6;
+  static const int JUNK = 7;
+  static const int CURRENCY = 8;
+  static const int VALUABLES = 9;
 }

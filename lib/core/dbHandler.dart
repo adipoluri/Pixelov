@@ -1,8 +1,12 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:pixelov/extras/constants.dart';
+import 'package:pixelov/model/category.dart';
 import 'package:pixelov/model/raidTimer.dart';
 import 'package:pixelov/model/time.dart';
 import 'package:pixelov/model/user.dart';
@@ -10,6 +14,7 @@ import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dar
 
 class DBHandler {
   User currentUser;
+  static Map<int, Category> items;
 
   initDB() async {
     await Hive.initFlutter();
@@ -17,6 +22,15 @@ class DBHandler {
     Hive.registerAdapter(RaidTimerAdapter());
     Hive.registerAdapter(DailyAdapter());
     Hive.registerAdapter(TimeAdapter());
+  }
+
+  initData() async {
+    String data = await rootBundle.loadString('assets/data/items.json');
+    Iterable list = json.decode(data);
+    items = {};
+    for (Map<String, dynamic> item in list) {
+      items[item['id'] as int] = Category.fromJson(item);
+    }
   }
 
   Future<User> createAndUpdateUser(String email, String uid) async {

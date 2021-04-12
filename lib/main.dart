@@ -20,7 +20,6 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> with WidgetsBindingObserver {
   static DBHandler dBhandler;
   //StreamSubscription tokenStream;
-
   bool _initialised = false;
   bool _error = false;
 
@@ -29,8 +28,8 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
       dBhandler = new DBHandler();
       await Firebase.initializeApp();
       await dBhandler.initDB();
+      await dBhandler.initData();
       await timer();
-
       setState(() {
         _initialised = true;
       });
