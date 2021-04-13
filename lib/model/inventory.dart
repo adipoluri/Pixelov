@@ -232,7 +232,7 @@ class Inventory extends HiveObject {
     }
   }
 
-  void GetRandomItem() {
+  void getRandomItem() {
     Random random = new Random();
     int randomNumber = random.nextInt(8) + 1;
     int randomItemIndex =

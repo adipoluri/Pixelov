@@ -48,6 +48,6 @@ class User extends HiveObject {
   }
 
   void addRandomItem() {
-    this.inventory.GetRandomItem();
+    this.inventory.getRandomItem();
   }
 }

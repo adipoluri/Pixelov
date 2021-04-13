@@ -88,11 +88,61 @@ class DBHandler {
     final box = await Hive.openBox<User>('currentUser');
     currentUser = box.get("currentUser");
     currentUser.updateUser();
+    convertInventory();
   }
 
   clearDb() async {
     final box = await Hive.openBox<User>('currentUser');
     box.delete("currentUser");
+  }
+
+  void convertInventory() {
+    //TODO: Fix this when hive gets patched
+
+    List<InventorySlot> temp = [];
+    temp.addAll(currentUser.inventory.key);
+    currentUser.inventory.key = [];
+    currentUser.inventory.key.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.gear);
+    currentUser.inventory.gear = [];
+    currentUser.inventory.gear.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.weapon);
+    currentUser.inventory.weapon = [];
+    currentUser.inventory.weapon.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.food);
+    currentUser.inventory.food = [];
+    currentUser.inventory.food.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.extra);
+    currentUser.inventory.extra = [];
+    currentUser.inventory.extra.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.unlockable);
+    currentUser.inventory.unlockable = [];
+    currentUser.inventory.unlockable.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.junk);
+    currentUser.inventory.junk = [];
+    currentUser.inventory.junk.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.currency);
+    currentUser.inventory.currency = [];
+    currentUser.inventory.currency.addAll(temp);
+    temp.clear();
+
+    temp.addAll(currentUser.inventory.valuables);
+    currentUser.inventory.valuables = [];
+    currentUser.inventory.valuables.addAll(temp);
   }
 
   Item getItemObjectWithUid(String uid, int category) {
