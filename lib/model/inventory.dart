@@ -48,7 +48,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.key.length; i++) {
           if (this.key[i].uid == uid) {
             this.key[i].total++;
-            break;
+            return;
           }
         }
         this.key.add(new InventorySlot(uid: uid, total: 1));
@@ -57,7 +57,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.gear.length; i++) {
           if (this.gear[i].uid == uid) {
             this.gear[i].total++;
-            break;
+            return;
           }
         }
         this.gear.add(new InventorySlot(uid: uid, total: 1));
@@ -66,7 +66,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.weapon.length; i++) {
           if (this.weapon[i].uid == uid) {
             this.weapon[i].total++;
-            break;
+            return;
           }
         }
         this.weapon.add(new InventorySlot(uid: uid, total: 1));
@@ -75,7 +75,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.food.length; i++) {
           if (this.food[i].uid == uid) {
             this.food[i].total++;
-            break;
+            return;
           }
         }
         this.food.add(new InventorySlot(uid: uid, total: 1));
@@ -84,7 +84,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.extra.length; i++) {
           if (this.extra[i].uid == uid) {
             this.extra[i].total++;
-            break;
+            return;
           }
         }
         this.extra.add(new InventorySlot(uid: uid, total: 1));
@@ -93,7 +93,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.unlockable.length; i++) {
           if (this.unlockable[i].uid == uid) {
             this.unlockable[i].total++;
-            break;
+            return;
           }
         }
         this.unlockable.add(new InventorySlot(uid: uid, total: 1));
@@ -102,7 +102,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.junk.length; i++) {
           if (this.junk[i].uid == uid) {
             this.junk[i].total++;
-            break;
+            return;
           }
         }
         this.junk.add(new InventorySlot(uid: uid, total: 1));
@@ -111,7 +111,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.currency.length; i++) {
           if (this.currency[i].uid == uid) {
             this.currency[i].total++;
-            break;
+            return;
           }
         }
         this.currency.add(new InventorySlot(uid: uid, total: 1));
@@ -120,7 +120,7 @@ class Inventory extends HiveObject {
         for (int i = 0; i < this.valuables.length; i++) {
           if (this.valuables[i].uid == uid) {
             this.valuables[i].total++;
-            break;
+            return;
           }
         }
         this.valuables.add(new InventorySlot(uid: uid, total: 1));

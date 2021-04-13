@@ -44,15 +44,15 @@ class InventoryRowItem extends StatelessWidget {
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new Text(item.name, style: TextStyles.locationTitle),
+            new Text("x " + quantity.toString(),
+                style: TextStyles.locationSubText),
             new Container(
               color: const Color(0xFF878787),
               width: 24.0,
               height: 1.0,
               margin: const EdgeInsets.symmetric(vertical: 8.0),
             ),
-            new Text("x " + quantity.toString(),
-                style: TextStyles.locationSubText),
+            new Text(item.name, style: TextStyles.locationTitle),
           ],
         ),
       ),

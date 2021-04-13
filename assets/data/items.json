@@ -4,7 +4,7 @@
         "items": [
             {
                 "uid": "36f30c05-7865-409c-bad2-cc309fca4bd3",
-                "name": "Key to KIBA store outlet",
+                "name": "Key to KIBA store",
                 "price": 1000000,
                 "category": 1,
                 "traderName": "Therapist",
@@ -1033,7 +1033,7 @@
             },
             {
                 "uid": "480c2c28-1da8-480c-b936-42b1e9b4d739",
-                "name": "Killa face shield (Killa)",
+                "name": "Killa face shield",
                 "price": 54999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1081,7 +1081,7 @@
             },
             {
                 "uid": "ad2f4cf7-b3c5-40bf-b9fc-dd731dbda727",
-                "name": "Multi-hit ballistic face shield-visor for Ops-Core FAST helmet",
+                "name": "ballistic face shield",
                 "price": 300000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1193,7 +1193,7 @@
             },
             {
                 "uid": "338aa646-bd1c-4a90-b995-d0c491137dbf",
-                "name": "\"Door Kicker\" Boonie hat",
+                "name": "Boonie hat",
                 "price": 17750,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1281,7 +1281,7 @@
             },
             {
                 "uid": "c0e0fbbf-49f7-4e95-8bf4-04fc4a09d84d",
-                "name": "Wartech TV-110 plate carrier",
+                "name": "TV-110 plate carrier",
                 "price": 150000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1289,7 +1289,7 @@
             },
             {
                 "uid": "11481452-51ba-438d-a361-bfb2b9fb3894",
-                "name": "Crye Precision AVS platecarrier",
+                "name": "AVS platecarrier",
                 "price": 84000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1297,7 +1297,7 @@
             },
             {
                 "uid": "b93834e3-8420-4499-b14b-d1c7ae9c1591",
-                "name": "ANA Tactical M2 armored rig",
+                "name": "M2 armored rig",
                 "price": 90000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1305,7 +1305,7 @@
             },
             {
                 "uid": "1e608c20-ec03-45e1-9d1a-07946285be93",
-                "name": "ANA Tactical M1 armored rig",
+                "name": "M1 armored rig",
                 "price": 154777,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1313,7 +1313,7 @@
             },
             {
                 "uid": "4f835164-d52c-44e5-b7dc-1ae3b0964b3d",
-                "name": "5.11 Tactec plate carrier)",
+                "name": "actec plate carrier)",
                 "price": 310000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1321,7 +1321,7 @@
             },
             {
                 "uid": "ff4703eb-f98d-4def-a50e-6db715540274",
-                "name": "Wartech MK3 chest rig",
+                "name": "MK3 chest rig",
                 "price": 23500,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1329,7 +1329,7 @@
             },
             {
                 "uid": "17dac440-e499-45e1-ba85-c27edcdb16f9",
-                "name": "Velocity Systems Multi-Purpose Patrol Vest",
+                "name": "Multi-Purpose Patrol Vest",
                 "price": 42000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1337,7 +1337,7 @@
             },
             {
                 "uid": "174a4851-a3e5-4ba8-960c-90d194df6951",
-                "name": "Blackhawk! Commando Chest Harness",
+                "name": "Commando Chest Harness",
                 "price": 29999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1369,7 +1369,7 @@
             },
             {
                 "uid": "d8747365-c024-43d7-8582-41e3c428e239",
-                "name": "GSSh-01 active headset",
+                "name": "GH05T active headset",
                 "price": 13777,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1377,7 +1377,7 @@
             },
             {
                 "uid": "c491af39-59ea-4dd2-b369-a6d4da8c6741",
-                "name": "ComTac 2 headset",
+                "name": "TACT1C 2 headset",
                 "price": 29000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1385,7 +1385,7 @@
             },
             {
                 "uid": "23a892f4-3d55-436b-a69a-c6c125d5d602",
-                "name": "Sordin active headphones",
+                "name": "Sardine active headphones",
                 "price": 27000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1393,7 +1393,7 @@
             },
             {
                 "uid": "fb4207b4-8cfd-443a-965a-eee3888a2a4c",
-                "name": "ZSh-1-2M helmet (black)",
+                "name": "2M helmet",
                 "price": 37000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1401,7 +1401,7 @@
             },
             {
                 "uid": "a53b9b6e-3671-43fe-9429-08224083bb11",
-                "name": "6B47 Ratnik-BSh Helmet",
+                "name": "Ratlex Helmet",
                 "price": 32100,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1409,7 +1409,7 @@
             },
             {
                 "uid": "2b88db11-69fd-4a2c-81b5-9c56419fdb07",
-                "name": "ANA Tactical Alpha chest rig",
+                "name": "Alpha chest rig",
                 "price": 33333,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1425,7 +1425,7 @@
             },
             {
                 "uid": "b3facdc2-aaf0-487d-b108-363cab000099",
-                "name": "Ushanka ear-flap cap",
+                "name": "Ushanka",
                 "price": 22000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1433,7 +1433,7 @@
             },
             {
                 "uid": "cc676840-1044-46e1-9937-3f1fd84b5538",
-                "name": "BNTI Kirasa-N armor",
+                "name": "Kirasa",
                 "price": 50000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1441,7 +1441,7 @@
             },
             {
                 "uid": "74fb7a1d-ae21-4a31-ba83-1530ee6354d1",
-                "name": "Haley Strategic D3CRX Chest Harness",
+                "name": "D3CRX Chest Harness",
                 "price": 25400,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1449,7 +1449,7 @@
             },
             {
                 "uid": "2427c14c-c2f5-4262-be1c-6071d7708cee",
-                "name": "SSh-68 helmet (1968 steel helmet)",
+                "name": "PeePee hat",
                 "price": 22500,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1457,7 +1457,7 @@
             },
             {
                 "uid": "0a0eab7d-389a-49e5-88f2-ef90be27ab3b",
-                "name": "Triton M43-A Chest Harness",
+                "name": "M43-A Chest Harness",
                 "price": 21000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1465,7 +1465,7 @@
             },
             {
                 "uid": "f1c54454-9f5c-46d8-89fd-ad1a7ad70b8f",
-                "name": "Blackhawk! Commando Chest Harness (black)",
+                "name": "Commando Chest Harness (black)",
                 "price": 24989,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1473,7 +1473,7 @@
             },
             {
                 "uid": "cb388e6f-041c-481f-b819-a60d14df0ddb",
-                "name": "Crye Precision Airframe Tan",
+                "name": "Airframe Tan",
                 "price": 177000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1481,7 +1481,7 @@
             },
             {
                 "uid": "cc77832a-0e94-40e2-96bd-59ef405beaea",
-                "name": "FORT Redut-T5 body armor",
+                "name": "FORT body armor",
                 "price": 188296,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1489,7 +1489,7 @@
             },
             {
                 "uid": "00ecaed4-ba1e-494e-8f64-b06879055d9d",
-                "name": "Ops-Core Fast MT SUPER HIGH CUT Helmet Tan",
+                "name": "Fast MT Helmet",
                 "price": 140000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1497,7 +1497,7 @@
             },
             {
                 "uid": "d3d73205-18dc-46b3-8cae-86dd385cda39",
-                "name": "6B43 Zabralo-Sh 6A Armor",
+                "name": "6B43 6A Armor",
                 "price": 760000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1505,7 +1505,7 @@
             },
             {
                 "uid": "9b145457-6a19-4804-a9a9-9a433d17ccd7",
-                "name": "Team Wendy EXFIL Ballistic Helmet Black",
+                "name": "EXFIL Ballistic Helmet Black",
                 "price": 259999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1521,7 +1521,7 @@
             },
             {
                 "uid": "12aadb2d-427e-4194-9b03-e9ac90a9d073",
-                "name": "Ars Arma A18 Skanda plate carrier",
+                "name": "A18 Skanda plate carrier",
                 "price": 235500,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1537,7 +1537,7 @@
             },
             {
                 "uid": "2bf9e195-91dc-44e8-b23f-37c1b6ea7cd1",
-                "name": "Highcom Striker ACHHC IIIA black helmet",
+                "name": "ACHHC IIIA black helmet",
                 "price": 56000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1545,7 +1545,7 @@
             },
             {
                 "uid": "08ab89ce-ca5e-446b-acb9-574b88a9dbb9",
-                "name": "Highcom Striker ULACH IIIA black helmet",
+                "name": "ULACH IIIA black helmet",
                 "price": 96000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1569,7 +1569,7 @@
             },
             {
                 "uid": "4c335825-afb8-428c-9ae3-6ed1a97830a1",
-                "name": "6B13 assault armor (digital flora pattern)",
+                "name": "6B13 assault armor",
                 "price": 44900,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1649,7 +1649,7 @@
             },
             {
                 "uid": "7cbf3bc6-f5e6-45bc-a962-76c9c0241d7d",
-                "name": "IOTV Gen4 armor (high mobility kit)",
+                "name": "IOTV Gen4 armor HMK",
                 "price": 198000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1657,7 +1657,7 @@
             },
             {
                 "uid": "d32d47a2-9cab-4b34-b006-6a9dfd56088c",
-                "name": "Oakley Mechanism heavy duty backpack (black)",
+                "name": "Mechanism backpack (black)",
                 "price": 64420,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1665,7 +1665,7 @@
             },
             {
                 "uid": "915acae4-9e09-4030-83fa-4644aa9c9553",
-                "name": "Wartech gear rig (TV-109, TV-106)",
+                "name": "Wartech gear rig",
                 "price": 13888,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1673,7 +1673,7 @@
             },
             {
                 "uid": "2df5e427-5bee-4524-a204-3e4bf157a111",
-                "name": "Team Wendy EXFIL Ballistic Helmet Coyote",
+                "name": "EXFIL Ballistic Helmet Coyote",
                 "price": 110000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1681,7 +1681,7 @@
             },
             {
                 "uid": "94f2ded1-4e5b-419b-b716-0ef55a007816",
-                "name": "SSSh-95 Sfera-S (Sphere-S)",
+                "name": "SSSh-95 Sfera-S",
                 "price": 46887,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1697,7 +1697,7 @@
             },
             {
                 "uid": "3e7318ca-6cca-4fc4-ab8b-2d01f744aed0",
-                "name": "MSA ACH TC-2002 MICH Series Helmet",
+                "name": "TC-2002 MICH Series Helmet",
                 "price": 51111,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1769,7 +1769,7 @@
             },
             {
                 "uid": "3e949401-61ba-4ff3-905b-3f8bb8e27b14",
-                "name": "Mystery Ranch Blackjack 50 backpack (multicam)",
+                "name": "Blackjack 50 backpack",
                 "price": 190000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1777,7 +1777,7 @@
             },
             {
                 "uid": "e29ea3b3-b476-4615-b16d-2fa759ebf471",
-                "name": "6B23-1 armor (digital flora pattern)",
+                "name": "6B23-1 armor",
                 "price": 36969,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1785,7 +1785,7 @@
             },
             {
                 "uid": "00c20dc0-7965-4efa-a091-230921216cbe",
-                "name": "Highcom Trooper TFO armor (multicam)",
+                "name": "Trooper TFO armor",
                 "price": 139000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1793,7 +1793,7 @@
             },
             {
                 "uid": "b3211f01-aa00-4828-8dfc-7ff42cdea4b0",
-                "name": "6B13 assault armor (flora pattern)",
+                "name": "6B13 armor",
                 "price": 73200,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1801,7 +1801,7 @@
             },
             {
                 "uid": "e5a00430-b840-4d9d-8236-021cf9a42b5d",
-                "name": "6B23-2 armor (mountain flora pattern)",
+                "name": "6B23-2 armor",
                 "price": 50000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1817,7 +1817,7 @@
             },
             {
                 "uid": "353aab9a-dcb3-412b-9b13-44d509c63b7f",
-                "name": "6B13 M assault armor (tan)",
+                "name": "6B13 M assault armor",
                 "price": 440000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1825,7 +1825,7 @@
             },
             {
                 "uid": "702233cd-e04d-4a04-992b-ffdef5bae93b",
-                "name": "IOTV Gen4 armor (assault kit)",
+                "name": "IOTV Gen4 armor",
                 "price": 190000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1841,7 +1841,7 @@
             },
             {
                 "uid": "846b33ea-2477-43a2-84ad-edef624ef4ea",
-                "name": "IOTV Gen4 armor (full protection)",
+                "name": "IOTV Gen4 armor",
                 "price": 291222,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1849,7 +1849,7 @@
             },
             {
                 "uid": "f15c75f2-e3e8-4186-9ea5-8f8401250340",
-                "name": "3V G Paratus 3-Day Operator's Tactical Backpack",
+                "name": "Operator's Tactical Backpack",
                 "price": 56666,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1857,7 +1857,7 @@
             },
             {
                 "uid": "168dbfca-366f-41e2-a66e-b64e92b471fc",
-                "name": "Ana tactical Beta 2 battle backpack",
+                "name": "Beta 2 battle backpack",
                 "price": 79420,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1881,7 +1881,7 @@
             },
             {
                 "uid": "ddfe033e-c5b4-434a-a717-b22eb53a17bf",
-                "name": "6B47 Helmet with cover (flora digital)",
+                "name": "6B47 Helmet with cover",
                 "price": 34000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1897,7 +1897,7 @@
             },
             {
                 "uid": "2d7b4091-2114-4e8f-aebe-c4ee54dc057f",
-                "name": "Highcom Striker ACHHC IIIA olive helmet",
+                "name": "ACHHC IIIA olive helmet",
                 "price": 62000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1929,7 +1929,7 @@
             },
             {
                 "uid": "31c2f0d1-a621-4648-92ad-2eb5e75a2596",
-                "name": "Vulkan-5 (LShZ-5) heavy helmet",
+                "name": "Vulkan-5 heavy helmet",
                 "price": 164000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1945,7 +1945,7 @@
             },
             {
                 "uid": "9cdb3379-e4e6-4f07-9fdb-15c01ea88e34",
-                "name": "Ops-Core Fast MT SUPER HIGH CUT Helmet",
+                "name": "Fast MT SUPER HIGH CUT Helmet",
                 "price": 144999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1953,7 +1953,7 @@
             },
             {
                 "uid": "cb9e405f-aa88-4a78-974e-e8b22566f39e",
-                "name": "Highcom Striker ULACH IIIA tan helmet",
+                "name": "ULACH IIIA tan helmet",
                 "price": 85000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -1961,7 +1961,7 @@
             },
             {
                 "uid": "6f4bcc3f-7584-4534-99e8-2527b80aa778",
-                "name": "6B2 armor (flora)",
+                "name": "6B2 armor",
                 "price": 39700,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2049,7 +2049,7 @@
             },
             {
                 "uid": "639e5eed-3f2b-4a34-abf3-8b68a7c5e267",
-                "name": "MSA Gallet TC 800 High Cut combat helmet",
+                "name": "TC 800 High Cut combat helmet",
                 "price": 79000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2057,7 +2057,7 @@
             },
             {
                 "uid": "1e2a88b4-12e6-44fe-9ebc-605c88f5e7e9",
-                "name": "Ars Arma CPC MOD.2 plate carrier",
+                "name": "MOD.2 plate carrier",
                 "price": 459999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2065,7 +2065,7 @@
             },
             {
                 "uid": "cfd368f7-c154-47a6-a312-b79060ea45c3",
-                "name": "Spiritus Systems Bank Robber Chest Rig",
+                "name": "Bank Robber Chest Rig",
                 "price": 11500,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2105,7 +2105,7 @@
             },
             {
                 "uid": "b81acc1a-f2b8-42a4-b684-5fc59990bda7",
-                "name": "LBT-1961A Load Bearing Chest Vest",
+                "name": "Load Bearing Chest Vest",
                 "price": 32999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2113,7 +2113,7 @@
             },
             {
                 "uid": "586a48f8-3e95-4088-8e51-6667ce39e864",
-                "name": "Additional armor for the Bastion helmet",
+                "name": "Cap armour",
                 "price": 300000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2137,7 +2137,7 @@
             },
             {
                 "uid": "89fffe49-6c93-4f50-a2c7-a0c9f0401bf7",
-                "name": "LK 3F Transfer tourist backpack",
+                "name": "tourist backpack",
                 "price": 5000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2145,7 +2145,7 @@
             },
             {
                 "uid": "d945dff0-dffe-41c4-beb3-b8fb1483ea28",
-                "name": "Eberlestock F5 Switchblade backpack (dry earth)",
+                "name": "Switchblade backpack (dry earth)",
                 "price": 49998,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2153,7 +2153,7 @@
             },
             {
                 "uid": "1302e8a8-a419-4205-977f-35ed3baf30d4",
-                "name": "Eberlestock F4 Terminator load bearing backpack (tiger stripe)",
+                "name": "F4 Terminator load bearing backpack",
                 "price": 70000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2161,7 +2161,7 @@
             },
             {
                 "uid": "69974129-ae27-4048-bd98-f482b0372a71",
-                "name": "Direct Action Thunderbolt compact chest rig",
+                "name": "Thunderbolt compact chest rig",
                 "price": 18000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2185,7 +2185,7 @@
             },
             {
                 "uid": "b9a1a8eb-a2bd-4ab5-9478-3c3c8e43d19f",
-                "name": "Galvion Caiman Ballistic Helmet",
+                "name": "Caiman Ballistic Helmet",
                 "price": 92222,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2217,7 +2217,7 @@
             },
             {
                 "uid": "16844a1b-662d-420c-a885-dd684dc2b1d7",
-                "name": "Highcom Trooper TFO armor (multicam)",
+                "name": "Trooper TFO armor",
                 "price": 135000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2225,7 +2225,7 @@
             },
             {
                 "uid": "efc5fe33-9262-48c6-9559-2d6763f3f8c6",
-                "name": "DIY IDEA chest rig",
+                "name": "IDEA chest rig",
                 "price": 11000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2241,7 +2241,7 @@
             },
             {
                 "uid": "3c997fea-4f40-4596-aba2-658f3e57ad13",
-                "name": "Gear Craft GC-BSS-MK1 rig",
+                "name": "GC-BSS-MK1 rig",
                 "price": 24900,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2249,7 +2249,7 @@
             },
             {
                 "uid": "f373e2da-e51a-4a5c-9a83-7b7ccd1e4dac",
-                "name": "5.11 Hexgrid plate carrier",
+                "name": "Hexgrid plate carrier",
                 "price": 599999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2273,7 +2273,7 @@
             },
             {
                 "uid": "3ac64ac9-6fa9-4c67-a604-ba689c3d3a41",
-                "name": "BNTI Gzhel-K armor",
+                "name": "Gzhel-K armor",
                 "price": 95000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2281,7 +2281,7 @@
             },
             {
                 "uid": "a8652c0a-fefa-4389-8626-4fff913f7bc3",
-                "name": "Eberlestock G2 Gunslinger II backpack (dry earth)",
+                "name": "Gunslinger II backpack (dry earth)",
                 "price": 65000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2289,7 +2289,7 @@
             },
             {
                 "uid": "404e7358-ae45-4aeb-a98d-623d946290fe",
-                "name": "Hazard4 Takedown sling backpack (multicam)",
+                "name": "Sling backpack (multicam)",
                 "price": 39500,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2297,7 +2297,7 @@
             },
             {
                 "uid": "d3447664-b4c5-402f-8f85-b3d451b8aca2",
-                "name": "Hazard4 Takedown sling backpack",
+                "name": "Takedown sling backpack",
                 "price": 39000,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2305,7 +2305,7 @@
             },
             {
                 "uid": "9d637e55-3011-4baa-ada7-e4349a54671a",
-                "name": "Azimut SS Jhuk Chest Harness (black)",
+                "name": "Jhuk Chest Harness (black)",
                 "price": 19999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2329,7 +2329,7 @@
             },
             {
                 "uid": "3d507f13-e511-4803-8623-b68944679cff",
-                "name": "Azimut SS Jhuk Chest Harness (SURPAT)",
+                "name": "Jhuk Chest Harness (SURPAT)",
                 "price": 22221,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2337,7 +2337,7 @@
             },
             {
                 "uid": "c3d2f4a5-106c-4056-ac05-c3a2a7585b82",
-                "name": "LBT 6094A Slick Plate Carrier (olive)",
+                "name": "Slick Plate Carrier (olive)",
                 "price": 632999,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2345,7 +2345,7 @@
             },
             {
                 "uid": "c2d7cefb-a80d-450d-bbae-242e50e0f06c",
-                "name": "LBT 6094A Slick Plate Carrier (tan)",
+                "name": "Slick Plate Carrier (tan)",
                 "price": 648420,
                 "category": 2,
                 "traderName": "Ragman",
@@ -2366,7 +2366,7 @@
         "items": [
             {
                 "uid": "a1712df4-4763-4795-914b-851fffb8e6d8",
-                "name": "AK-101 5.56x45 assault rifle",
+                "name": "AP-101 5.56x45 AR",
                 "price": 36000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2374,7 +2374,7 @@
             },
             {
                 "uid": "138d8561-da79-4cbb-a4a7-2cb761a3a3c7",
-                "name": "AK-102 5.56x45 assault rifle",
+                "name": "AP-102 5.56x45 AR",
                 "price": 54000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2382,7 +2382,7 @@
             },
             {
                 "uid": "2953cf94-890e-44e6-9f93-0dccb38d69ea",
-                "name": "AK-103 7.62x39 assault rifle",
+                "name": "AP-103 7.62x39 AR",
                 "price": 41420,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2390,7 +2390,7 @@
             },
             {
                 "uid": "6cf23c81-2c09-47d6-a1f3-ab736fa19656",
-                "name": "AK-104 7.62x39 assault rifle",
+                "name": "AP-104 7.62x39 AR",
                 "price": 29999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2398,7 +2398,7 @@
             },
             {
                 "uid": "5fc0c5f2-19fd-4eab-bac0-cd249751c1fb",
-                "name": "AK-105 5.45x39 assault rifle",
+                "name": "AP-105 5.45x39 AR",
                 "price": 22000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2406,7 +2406,7 @@
             },
             {
                 "uid": "915a0dda-ff4b-4458-bdfd-92ada5e825b7",
-                "name": "AK-74 5.45x39 assault rifle",
+                "name": "AP-74 5.45x39 AR",
                 "price": 18400,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2414,7 +2414,7 @@
             },
             {
                 "uid": "c667583b-ab58-4bb2-b3fa-f1b5ea1e6938",
-                "name": "AK-74M 5.45x39 assault rifle",
+                "name": "AP-74M 5.45x39 AR",
                 "price": 22000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2422,7 +2422,7 @@
             },
             {
                 "uid": "bfde662f-e110-4d0d-a8bf-83ff01f6c48e",
-                "name": "AK-74N 5.45x39 assault rifle",
+                "name": "AP-74N 5.45x39 AR",
                 "price": 19000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2430,7 +2430,7 @@
             },
             {
                 "uid": "7ecda500-745e-4275-8b4e-b883b0a28139",
-                "name": "AKM 7.62x39 assault rifle",
+                "name": "APM 7.62x39 AR",
                 "price": 30000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2438,7 +2438,7 @@
             },
             {
                 "uid": "97571456-46a7-4b8c-9539-3a2211e0d884",
-                "name": "AKMN 7.62x39 assault rifle",
+                "name": "APMN 7.62x39 AR",
                 "price": 47999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2446,7 +2446,7 @@
             },
             {
                 "uid": "15728433-6b75-4511-ad6c-b06f8b9a2b4c",
-                "name": "AKMS 7.62x39 assault rifle",
+                "name": "APMS 7.62x39 AR",
                 "price": 19000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2454,7 +2454,7 @@
             },
             {
                 "uid": "db8b528d-195e-4d1d-bf62-e95a091ad1d4",
-                "name": "AKMSN 7.62x39 assault rifle",
+                "name": "APMSN 7.62x39 AR",
                 "price": 22500,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2462,7 +2462,7 @@
             },
             {
                 "uid": "a6bd6fed-2c40-49b0-bbac-26a52fdcac35",
-                "name": "AKS-74 5.45x39 assault rifle",
+                "name": "APS-74 5.45x39 AR",
                 "price": 18999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2470,7 +2470,7 @@
             },
             {
                 "uid": "7d598c7b-af4b-44b3-b345-261bf756d4bb",
-                "name": "AKS-74N 5.45x39 assault rifle",
+                "name": "APS-74N 5.45x39 AR",
                 "price": 24000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2478,7 +2478,7 @@
             },
             {
                 "uid": "d71b301e-4187-446a-9fcc-a0ee3d98a193",
-                "name": "AS VAL",
+                "name": "VAL",
                 "price": 85000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2486,7 +2486,7 @@
             },
             {
                 "uid": "3522164a-3fab-44eb-ba5a-4c2e7b3043b1",
-                "name": "ASh-12 12.7x55 assault rifle",
+                "name": "ASS-12 12.7x55 AR",
                 "price": 63000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2494,7 +2494,7 @@
             },
             {
                 "uid": "59fb9176-29f5-4e23-867a-a4a0aa6e78f2",
-                "name": "HK 416A5 5.56x45 Assault Rifle",
+                "name": "NK 416A5 5.56x45 AR",
                 "price": 58000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2502,7 +2502,7 @@
             },
             {
                 "uid": "1da94960-5a14-4cb0-bc25-23a07ecbc915",
-                "name": "Kalashnikov AKS-74U 5.45x39",
+                "name": "Khalafnokov APS-74U 5.45x39",
                 "price": 16888,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2510,7 +2510,7 @@
             },
             {
                 "uid": "1712edd1-ee59-4277-a228-f79b964baeeb",
-                "name": "Kalashnikov AKS-74UB 5.45x39",
+                "name": "Khalafnokov APS-74UB 5.45x39",
                 "price": 22222,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2518,7 +2518,7 @@
             },
             {
                 "uid": "f907aa43-bb7f-4dc3-92fb-e8805b66f54f",
-                "name": "Kalashnikov AKS-74UN 5.45x39",
+                "name": "Khalafnokov APS-74UN 5.45x39",
                 "price": 19000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2526,7 +2526,7 @@
             },
             {
                 "uid": "2d7ba6e6-421d-464c-8e29-f93d56aceb04",
-                "name": "Simonov Semi-Automatic Carbine SKS 7.62x39",
+                "name": "Semi-Auto SKS 7.62x39",
                 "price": 21420,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2534,7 +2534,7 @@
             },
             {
                 "uid": "e0291a4a-0661-466c-9c65-a77a7e974aea",
-                "name": "Simonov Semi-Automatic Carbine SKS 7.62x39 Hunting Rifle Version",
+                "name": "Semi-Auto SKS 7.62x39 Hunting Rifle Version",
                 "price": 17888,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2542,7 +2542,7 @@
             },
             {
                 "uid": "7bed8119-00ac-4d9f-a0f9-2059becaf7e4",
-                "name": "Vepr AKM / VPO-209 366TKM carbine",
+                "name": "Vipr V0 366TKM carbine",
                 "price": 15000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2550,7 +2550,7 @@
             },
             {
                 "uid": "b49b1e89-5b12-4a6a-a6a3-6a20ca161578",
-                "name": "Vepr Hunter/VPO-101 7.62x51 carbine",
+                "name": "Vipr Hunter V0-101 7.62x51 carbine",
                 "price": 27000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2558,7 +2558,7 @@
             },
             {
                 "uid": "247f31e5-348c-4958-a9e1-c9e79a8dad8e",
-                "name": "Vepr KM / VPO-136 7.62x39 carbine",
+                "name": "Vipr V0-136 7.62x39 carbine",
                 "price": 14000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2566,7 +2566,7 @@
             },
             {
                 "uid": "e4d7e777-c629-4398-95ec-a22172bed6c6",
-                "name": "DVL-10 Saboteur sniper rifle",
+                "name": "DEViL-10 Sniper Rifle",
                 "price": 56000,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2574,7 +2574,7 @@
             },
             {
                 "uid": "944fe256-abc3-400c-8c58-31fd1fef6bf1",
-                "name": "Mosin bolt-action infantry rifle",
+                "name": "Ancient bolt-action infantry rifle",
                 "price": 38000,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2582,7 +2582,7 @@
             },
             {
                 "uid": "aebf38a4-16e3-49c8-9d3d-33962d9a2d00",
-                "name": "Mosin bolt-action sniper rifle",
+                "name": "Ancient bolt-action sniper rifle",
                 "price": 55900,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2590,7 +2590,7 @@
             },
             {
                 "uid": "5f2636b6-e1eb-4a22-b4e4-701d6a2ba5d7",
-                "name": "Orsis T-5000 .308 sniper rifle",
+                "name": "Trials of Osiris .308 sniper rifle",
                 "price": 47000,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2598,7 +2598,7 @@
             },
             {
                 "uid": "1d351608-3986-4cea-90b4-4d9b08fb989d",
-                "name": "Remington Model 700 Sniper rifle",
+                "name": "Model 690 Sniper rifle",
                 "price": 34000,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2606,7 +2606,7 @@
             },
             {
                 "uid": "8b1127e6-3353-49a5-9451-270dc3a6d146",
-                "name": "SV-98 bolt-action sniper rifle",
+                "name": "AV-98 bolt-action sniper rifle",
                 "price": 49000,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2614,7 +2614,7 @@
             },
             {
                 "uid": "f7f92c1b-d5f3-4575-8459-0a6690b74f38",
-                "name": "Molot VPO-215 .366 TKM rifle",
+                "name": "4L3X V0-215 .366 TKM rifle",
                 "price": 19999,
                 "category": 3,
                 "traderName": "Jaeger",
@@ -2622,7 +2622,7 @@
             },
             {
                 "uid": "31dff41f-88e4-43b2-a509-fc78dc7cdb86",
-                "name": "RPK-16 5.45x39 light machine gun",
+                "name": "KILLA-16 5.45x39 LMG",
                 "price": 59999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2630,7 +2630,7 @@
             },
             {
                 "uid": "f275d395-ccf3-408e-a563-dfa58601c838",
-                "name": "Knight's Armament Company SR-25 7.62x51",
+                "name": "SR-69 7.62x51 DMR",
                 "price": 50000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2638,7 +2638,7 @@
             },
             {
                 "uid": "0e081ae1-cd49-4c1f-b8de-8c141f3c958b",
-                "name": "Remington R11 RSASS 7.62x51",
+                "name": "R11 R-ASS 7.62x51",
                 "price": 160000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2646,7 +2646,7 @@
             },
             {
                 "uid": "8b8c8c20-2cb7-482c-ab67-8b5fc101574e",
-                "name": "Special Sniper Rifle VSS Vintorez",
+                "name": "VSS",
                 "price": 52000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2654,7 +2654,7 @@
             },
             {
                 "uid": "3934d22f-b5eb-412d-bb8d-98a0f63d3893",
-                "name": "Springfield Armory M1A 7.62x51",
+                "name": "M1A 7.62x51",
                 "price": 63888,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2670,7 +2670,7 @@
             },
             {
                 "uid": "d354012c-921b-4de1-91b8-8186624c6cf6",
-                "name": "9x21 Serdyukov automatic pistol SR1MP Gyurza",
+                "name": "SHR1MP Gyoza 9x21 auto-pistol ",
                 "price": 21420,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2678,7 +2678,7 @@
             },
             {
                 "uid": "295dea20-af39-4007-92da-abe8bcee78cd",
-                "name": "Beretta M9A3 9x19 pistol",
+                "name": "Beretta 9x19 pistol",
                 "price": 10250,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2686,7 +2686,7 @@
             },
             {
                 "uid": "04b05482-2d80-4825-9ef9-6ce478ba9421",
-                "name": "FN Five-seveN MK2 5.7x28 pistol",
+                "name": "5-7 MK2 5.7x28 pistol",
                 "price": 29999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2694,7 +2694,7 @@
             },
             {
                 "uid": "7d819abf-5c41-4498-a21c-8273080b8166",
-                "name": "GLOCK 17 9x19 pistol",
+                "name": "COCK 17 9x19 pistol",
                 "price": 15555,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2702,7 +2702,7 @@
             },
             {
                 "uid": "96d0e8ac-c193-4894-bdb0-8c4ea629c3a2",
-                "name": "GLOCK 18C 9x19 pistol",
+                "name": "COCK 18C 9x19 pistol",
                 "price": 30000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2710,7 +2710,7 @@
             },
             {
                 "uid": "146e793a-11f4-46f0-bfda-6460f70d18ec",
-                "name": "P226R 9x19 pistol",
+                "name": "P69 9x19 pistol",
                 "price": 9997,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2742,7 +2742,7 @@
             },
             {
                 "uid": "01971851-6ff2-421a-89c4-459cc539d7ce",
-                "name": "Silenced Stechkin Automatic Pistol 9x18PM",
+                "name": "Silenced Auto-Pistol 9x18PM",
                 "price": 12500,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2750,7 +2750,7 @@
             },
             {
                 "uid": "3e0a78e3-db45-41ee-b457-3233ade028fa",
-                "name": "Stechkin Automatic Pistol 9x18PM",
+                "name": "Auto-Pistol 9x18PM",
                 "price": 9500,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2758,7 +2758,7 @@
             },
             {
                 "uid": "0b561eb9-bedd-4100-a2f6-1e582a4f1013",
-                "name": "TT pistol 7.62x25 TT Gold",
+                "name": "GOLD TT pistol 7.62x25",
                 "price": 28000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2766,7 +2766,7 @@
             },
             {
                 "uid": "0525b0ae-8032-4e4d-80f5-63d51ece1365",
-                "name": "Yarygin MP-443 Grach 9x19 pistol",
+                "name": "Grach 9x19 pistol",
                 "price": 9000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2774,7 +2774,7 @@
             },
             {
                 "uid": "10185aed-95a3-4abc-a943-529e330118d4",
-                "name": "TT pistol 7.62x25 TT",
+                "name": "TT pistol 7.62x25",
                 "price": 5700,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2782,7 +2782,7 @@
             },
             {
                 "uid": "bc36d87b-98e8-4faa-b2e2-769b0ce340a6",
-                "name": "FN Five-seveN MK2 FDE Frame 5.7x28 pistol",
+                "name": "5-7 MK2 FDE Frame 5.7x28 pistol",
                 "price": 27499,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2790,7 +2790,7 @@
             },
             {
                 "uid": "fd09d3ff-db50-48db-afa7-728ca1976930",
-                "name": "MP-133 12ga shotgun",
+                "name": "MP-169 12ga shotgun",
                 "price": 50000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2798,7 +2798,7 @@
             },
             {
                 "uid": "1eadf001-eac3-4a31-a8e7-3cee196f70d7",
-                "name": "MP-153 12ga semi-automatic shotgun",
+                "name": "MP-269 12ga semi-auto shotgun",
                 "price": 24000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2806,7 +2806,7 @@
             },
             {
                 "uid": "637904b6-7d7a-491b-b9c5-34c263a20a64",
-                "name": "Remington Model 870 12ga shotgun",
+                "name": "Model 870 12ga shotgun",
                 "price": 31500,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2814,7 +2814,7 @@
             },
             {
                 "uid": "908aa550-1b4f-49f5-8af2-3474b326aa60",
-                "name": "Saiga 12ga ver. 10 12/76 shotgun",
+                "name": "Saiga 12ga shotgun",
                 "price": 20000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2822,7 +2822,7 @@
             },
             {
                 "uid": "15391df6-40a6-44af-b951-362dbfb9908a",
-                "name": "TOZ-106 bolt-action shotgun",
+                "name": "OPOZ-106 bolt-action shotgun",
                 "price": 6000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2830,7 +2830,7 @@
             },
             {
                 "uid": "2b027030-25eb-40db-91ba-76bd87ece38b",
-                "name": "B&T MP9 9x19 submachinegun",
+                "name": "MP9 9x19 submachinegun",
                 "price": 29969,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2838,7 +2838,7 @@
             },
             {
                 "uid": "a384f43b-2549-4422-8840-31f3718b1bc1",
-                "name": "FN P90 5.7x28 submachinegun",
+                "name": "P90 5.7x28 submachinegun",
                 "price": 57000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2846,7 +2846,7 @@
             },
             {
                 "uid": "1fe3f386-7326-4722-9a9e-0b2e4686806e",
-                "name": "HK MP5 9x19 submachinegun (Navy 3 Round Burst)",
+                "name": "MP5 9x19 submachinegun",
                 "price": 18000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2854,7 +2854,7 @@
             },
             {
                 "uid": "c7f88170-cdbc-432c-8ab2-a427ac54aa7a",
-                "name": "HK MP5 Kurz 9x19 submachinegun",
+                "name": "MP5 krit 9x19 submachinegun",
                 "price": 14999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2862,7 +2862,7 @@
             },
             {
                 "uid": "65a4effb-7d19-485e-a23c-b383178e0d37",
-                "name": "HK MP7A1 4.6x30 submachinegun",
+                "name": "MP7A1 4.6x30 submachinegun",
                 "price": 50420,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2870,7 +2870,7 @@
             },
             {
                 "uid": "9b98b61f-67d6-4cfe-9e42-96e9845a76c8",
-                "name": "HK MP7A2 4.6x30 submachinegun",
+                "name": "MP7A2 4.6x30 submachinegun",
                 "price": 80000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2878,7 +2878,7 @@
             },
             {
                 "uid": "6609b50d-5179-408e-9ca4-c6c2ccb961f1",
-                "name": "PP-9 Klin 9x18PMM SMG",
+                "name": "Klin 9x18PMM SMG",
                 "price": 13998,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2886,7 +2886,7 @@
             },
             {
                 "uid": "0c4b072e-1e3a-4252-9d65-e8975f6b0fba",
-                "name": "PP-91 Kedr 9x18PM SMG",
+                "name": "Kedr 9x18PM SMG",
                 "price": 13000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2894,7 +2894,7 @@
             },
             {
                 "uid": "b89aa42a-2979-4d19-9137-28fc30c24033",
-                "name": "PP-91-01 Kedr-B 9x18PM SMG",
+                "name": "Kedr-B 9x18PM SMG",
                 "price": 22000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2910,7 +2910,7 @@
             },
             {
                 "uid": "be5f9ae0-a389-43b3-bb84-ec7a233fff22",
-                "name": "SIG MPX 9x19 Submachine gun",
+                "name": "MPX 9x19 Submachinegun",
                 "price": 43000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2918,7 +2918,7 @@
             },
             {
                 "uid": "b68ae700-67c1-4364-af77-ce9c7302af5a",
-                "name": "Submachinegun PP-19-01 Vityaz-SN 9x19",
+                "name": "Vityaz-SN 9x19 Submachinegun",
                 "price": 19888,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2926,7 +2926,7 @@
             },
             {
                 "uid": "a8a23ac3-c006-405f-99f2-6219ec0b6cb8",
-                "name": "B&T MP9-N 9x19 Submachinegun",
+                "name": "MP9-N 9x19 Submachinegun",
                 "price": 19000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2934,7 +2934,7 @@
             },
             {
                 "uid": "08d4789d-5673-486c-984a-3c0f260c4592",
-                "name": "Submachinegun PPSH-41 7.62x25",
+                "name": "PPSH-41 7.62x25",
                 "price": 17000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2942,7 +2942,7 @@
             },
             {
                 "uid": "8e04ec0f-7cc1-47ce-b27e-6913762bd3b4",
-                "name": "Colt M1911A1 .45 ACP pistol",
+                "name": "M1911A1 .45 ACP pistol",
                 "price": 11111,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2950,7 +2950,7 @@
             },
             {
                 "uid": "c4c810ec-8ef1-4e1c-b94d-9c76f80494dd",
-                "name": "FN GL40 Mk.2 grenade launcher",
+                "name": "Mk.2 grenade launcher",
                 "price": 12750750,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2966,7 +2966,7 @@
             },
             {
                 "uid": "6bd49efc-18c1-41a5-bfde-6fe124b7e70c",
-                "name": "GP-34 underbarrel grenade launcher",
+                "name": "underbarrel grenade launcher",
                 "price": 50900,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2974,7 +2974,7 @@
             },
             {
                 "uid": "67eebe59-2411-4d6d-9d45-e5946ca5c9f1",
-                "name": "Colt M45A1 .45 ACP pistol",
+                "name": "M45A1 .45 ACP pistol",
                 "price": 11111,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2982,7 +2982,7 @@
             },
             {
                 "uid": "5c1f6715-4556-469d-b9b8-0781840194ae",
-                "name": "Mossberg 590A1 12ga shotgun",
+                "name": "590A1 12ga shotgun",
                 "price": 24300,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2990,7 +2990,7 @@
             },
             {
                 "uid": "fea4d1cd-f6c2-4b18-9e58-a23db1444722",
-                "name": "TOZ KS-23M 23x75mm shotgun",
+                "name": "OPOZ KS-23M 23x75mm shotgun",
                 "price": 125000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -2998,7 +2998,7 @@
             },
             {
                 "uid": "d48f7afd-ff0d-4ec7-9494-91254fdc3e43",
-                "name": "Lone Star TX-15 DML Rifle",
+                "name": "TX-69 DML Rifle",
                 "price": 71500,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3006,7 +3006,7 @@
             },
             {
                 "uid": "c975e89c-920b-4ec4-a9df-d6cac7794109",
-                "name": "ADAR 2-15 .223 Carbine",
+                "name": "ADIR 2-15 .223 Carbine",
                 "price": 21111,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3014,7 +3014,7 @@
             },
             {
                 "uid": "91c1bd70-51a9-4cdf-b333-fbba237d2dda",
-                "name": "DS Arms SA-58 7.62x51",
+                "name": "JU1C3-58 7.62x51",
                 "price": 49000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3022,7 +3022,7 @@
             },
             {
                 "uid": "355d42e3-47c2-4ff6-b27a-2e96489d9de2",
-                "name": "DT MDR 5.56x45 Assault Rifle",
+                "name": "MRDR 5.56x45 Assault Rifle",
                 "price": 48000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3030,7 +3030,7 @@
             },
             {
                 "uid": "f2e684a3-b58a-45b6-bce7-b758d1df8199",
-                "name": "DT MDR 7.62x51 Assault Rifle",
+                "name": "MRDR 7.62x51 Assault Rifle",
                 "price": 146666,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3038,7 +3038,7 @@
             },
             {
                 "uid": "09029383-736d-4f96-b605-edd94ebcd04c",
-                "name": "Colt M4A1 5.56x45 Assault Rifle",
+                "name": "M6A1 5.56x45 Assault Rifle",
                 "price": 43000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3046,7 +3046,7 @@
             },
             {
                 "uid": "855ee05f-701c-44f8-a80e-9cb3581db661",
-                "name": "Kel-Tec RFB 7.62x51",
+                "name": "RFB 7.62x51",
                 "price": 39000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3054,7 +3054,7 @@
             },
             {
                 "uid": "61f5999a-de23-49ed-b5d8-455d5c50fde3",
-                "name": "TDI Kriss Vector Gen.2 9x19 submachinegun",
+                "name": "Kriss Vector 9x19 submachinegun",
                 "price": 97420,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3062,7 +3062,7 @@
             },
             {
                 "uid": "f625f5ee-ac39-4531-90dc-12b2391285c2",
-                "name": "TDI KRISS Vector Gen.2 .45 ACP submachinegun",
+                "name": "KRISS Vector .45 ACP submachinegun",
                 "price": 88000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3070,7 +3070,7 @@
             },
             {
                 "uid": "38fe1428-43fd-45fa-923c-2b39f63cf7fa",
-                "name": "HK UMP 45 submachinegun",
+                "name": "UMP 45 submachinegun",
                 "price": 25420,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3078,7 +3078,7 @@
             },
             {
                 "uid": "07cb3298-769e-4dc9-bb5c-99711be34ff4",
-                "name": "SIG MCX .300 AAC Blackout Assault Rifle",
+                "name": "MCX .300 Blackout Assault Rifle",
                 "price": 69999,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3086,23 +3086,15 @@
             },
             {
                 "uid": "67387c9d-b024-46d7-b9cc-f8c49d155e39",
-                "name": "Mk-18 .338 LM marksman rifle",
+                "name": "LAPUA .338 marksman rifle",
                 "price": 150000,
                 "category": 3,
                 "traderName": "Mechanic",
                 "icon": "https://cdn.tarkov-market.com/images/items/mk-18_.338_lm_marksman_rifle_sm.png"
             },
             {
-                "uid": "78af0ff5-901c-4413-923c-926d8f18f124",
-                "name": "PL-15 9x19 pistol",
-                "price": 33333,
-                "category": 3,
-                "traderName": "Mechanic",
-                "icon": "https://cdn.tarkov-market.com/images/items/pl-15_9x19_pistol_sm.png"
-            },
-            {
                 "uid": "7b9ae557-8c04-493b-ab34-6c31af67efdd",
-                "name": "STM-9 Gen.2 9x19 carabine",
+                "name": "STIMMY-9 9x19 carabine",
                 "price": 40000,
                 "category": 3,
                 "traderName": "Mechanic",
@@ -3123,7 +3115,7 @@
             },
             {
                 "uid": "fb7e9a19-7029-4076-83a6-f913c3c8e9f8",
-                "name": "\"Fierce Hatchling\" moonshine",
+                "name": "moonshine",
                 "price": 389000,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3131,7 +3123,7 @@
             },
             {
                 "uid": "8b1e494b-21b1-4386-b6d1-6f75d4025c41",
-                "name": "42nd Signature Blend English Tea",
+                "name": "English Tea",
                 "price": 18000,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3139,7 +3131,7 @@
             },
             {
                 "uid": "f591d0d2-1926-46a2-9924-a32610e202ca",
-                "name": "Bottle of vodka Tarkovskaya",
+                "name": "Vodka Pixelovskaya",
                 "price": 24000,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3147,7 +3139,7 @@
             },
             {
                 "uid": "1cc437b2-f5c3-47a4-8b53-6b61f9ab8334",
-                "name": "Jar of DevilDog mayo",
+                "name": "Jar of DevilDick mayo",
                 "price": 10000,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3163,7 +3155,7 @@
             },
             {
                 "uid": "d7bcfca7-6dca-455d-bf0a-472df37a900f",
-                "name": "TarCola",
+                "name": "PixCola",
                 "price": 16500,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3395,7 +3387,7 @@
             },
             {
                 "uid": "7dfa9a75-4028-4d15-aa81-732d150316bc",
-                "name": "Cocktail \"Obdolbos\"",
+                "name": "Cocktail",
                 "price": 33333,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3403,7 +3395,7 @@
             },
             {
                 "uid": "c4adee2a-48bb-47c9-8e17-75b9c8d79eae",
-                "name": "Premium Kvass \"Norvinskiy Yadreniy\" 0.6L bottle",
+                "name": "Premium Kvass 0.6L bottle",
                 "price": 15000,
                 "category": 4,
                 "traderName": "Therapist",
@@ -3424,7 +3416,7 @@
         "items": [
             {
                 "uid": "160c7064-3b9d-446d-9d1a-e05bc174e73b",
-                "name": "Trijicon REAP-IR thermal riflescope",
+                "name": "REAP-IR thermal riflescope",
                 "price": 1000000,
                 "category": 5,
                 "traderName": "Mechanic",
@@ -3448,7 +3440,7 @@
             },
             {
                 "uid": "5be893d3-6c4a-4189-bce4-05b049afc48a",
-                "name": "Combat stimulant injector SJ6 TGLabs",
+                "name": "stimulant SJ6 TGLabs",
                 "price": 63000,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3456,7 +3448,7 @@
             },
             {
                 "uid": "cbc6cab1-ec61-49b2-8e3c-82eb4ce35f77",
-                "name": "CMS kit (5/5)",
+                "name": "CMS kit",
                 "price": 27776,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3464,7 +3456,7 @@
             },
             {
                 "uid": "f24764fb-00b8-4cab-af32-29c134fcb1c0",
-                "name": "Golden Star Balm (10/10)",
+                "name": "Golden Star Balm",
                 "price": 179000,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3472,7 +3464,7 @@
             },
             {
                 "uid": "4fa3994d-8255-4be7-a8b7-c80d141289fb",
-                "name": "Vaseline (6/6)",
+                "name": "Vaseline",
                 "price": 59500,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3480,7 +3472,7 @@
             },
             {
                 "uid": "20e89468-f9c4-4e42-858e-c569557435cf",
-                "name": "Grizzly First Aid Kit (1800/1800)",
+                "name": "Grizzly First Aid Kit",
                 "price": 35000,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3488,7 +3480,7 @@
             },
             {
                 "uid": "dc2c8efc-482d-49be-9c9e-d749b4fd2dcf",
-                "name": "IFAK personal tactical first aid kit (300/300)",
+                "name": "IFAP personal tactical first aid kit",
                 "price": 12000,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3496,7 +3488,7 @@
             },
             {
                 "uid": "aed566f6-dc68-4263-a933-061c645098fc",
-                "name": "Salewa FIRST AID KIT (400/400)",
+                "name": "Salewa FIRST AID KIT",
                 "price": 23333,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3504,7 +3496,7 @@
             },
             {
                 "uid": "036ff8d8-9b14-4633-bdd6-94c5f3f89ea9",
-                "name": "Car first aid kit (220/220)",
+                "name": "Car first aid kit",
                 "price": 6800,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3536,7 +3528,7 @@
             },
             {
                 "uid": "84604d50-346e-4685-8f25-29369613c1c9",
-                "name": "Surv12 field surgical kit (15/15)",
+                "name": "Surv12 field surgical kit",
                 "price": 42999,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3544,7 +3536,7 @@
             },
             {
                 "uid": "f292e3a9-7800-4fc2-bda0-6d43aa112271",
-                "name": "Combat stimulant injector SJ1 TGLabs",
+                "name": "Stimulant SJ1 TGLabs",
                 "price": 45555,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3552,7 +3544,7 @@
             },
             {
                 "uid": "31577296-5fd3-4926-b373-c8f2ff2d4962",
-                "name": "Regenerative stimulant injector eTG-change",
+                "name": "Regenerative stimulant eTG-change",
                 "price": 93999,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3560,7 +3552,7 @@
             },
             {
                 "uid": "fd17e27b-0a49-431a-a6cb-95944e20c4cf",
-                "name": "Ibuprofen painkillers (15/15)",
+                "name": "Ibuprofen painkillers",
                 "price": 79999,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3576,7 +3568,7 @@
             },
             {
                 "uid": "bd72ebbc-b3fc-4178-9685-c3d5bd124795",
-                "name": "FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope",
+                "name": "FLIR 60Hz thermal riflescope",
                 "price": 690000,
                 "category": 5,
                 "traderName": "Mechanic",
@@ -3632,7 +3624,7 @@
             },
             {
                 "uid": "43ae98d6-98d0-40e5-bbd5-d1baecde315d",
-                "name": "Miller Bros. Blades M-2 Tactical Sword",
+                "name": "M-2 Tactical Sword",
                 "price": 1570000,
                 "category": 5,
                 "traderName": "Jaeger",
@@ -3744,7 +3736,7 @@
             },
             {
                 "uid": "c21eb6b7-0e2d-4e41-b070-f27c10aa6e57",
-                "name": "Combat stimulant injector SJ9 TGLabs",
+                "name": "Combat stimulant SJ9 TGLabs",
                 "price": 69000,
                 "category": 5,
                 "traderName": "Therapist",
@@ -3760,7 +3752,7 @@
             },
             {
                 "uid": "0a5ee2c6-c82e-4ff5-a258-ab38132fd65f",
-                "name": "AFAK personal tactical first aid kit (400/400)",
+                "name": "AFAK first aid kit",
                 "price": 38000,
                 "category": 5,
                 "traderName": "Therapist",
@@ -4514,7 +4506,7 @@
             },
             {
                 "uid": "8a1bb9dd-f6e3-4890-965f-6910f5bbb5d7",
-                "name": "Military COFDM wireless Signal Transmitter",
+                "name": "Military COFDM",
                 "price": 79950,
                 "category": 7,
                 "traderName": "Therapist",
@@ -4658,7 +4650,7 @@
             },
             {
                 "uid": "269a09fa-de52-4a58-88ab-deb198a25529",
-                "name": "#FireKlean gun lube",
+                "name": "FireKlean gun lube",
                 "price": 25000,
                 "category": 7,
                 "traderName": "Therapist",
@@ -4842,7 +4834,7 @@
             },
             {
                 "uid": "9ddc82ba-354d-4e6d-982b-1006fdde0cc7",
-                "name": "Military thermal vision module Iridium",
+                "name": "Military thermal vision module",
                 "price": 66899,
                 "category": 7,
                 "traderName": "Therapist",
