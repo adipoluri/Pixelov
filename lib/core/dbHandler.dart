@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flame/flame.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -36,6 +37,19 @@ class DBHandler {
     for (Map<String, dynamic> item in list) {
       items[item['id'] as int] = Category.fromJson(item);
     }
+  }
+
+  initImages() async {
+    await Flame.images.loadAll(<String>[
+      'player/1.png',
+      'player/2.png',
+      'player/3.png',
+      'player/4.png',
+      'player/5.png',
+      'player/6.png',
+      'player/7.png',
+      'player/playerShooting.png'
+    ]);
   }
 
   Future<User> createAndUpdateUser(String email, String uid) async {

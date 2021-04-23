@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
+import 'package:pixelov/widgets/raidScreen/badLands/badLandsScreen.dart';
 import 'package:pixelov/widgets/raidScreen/scavRaidSelectorScreen.dart';
 
 class RaidSelectorScreen extends StatefulWidget {
@@ -68,7 +69,9 @@ class _RaidSelectorScreenState extends State<RaidSelectorScreen> {
   TextButton badLandsButton(BuildContext context, String title, double width,
       double height, String path) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(context, badLandsRoute(new BadLandsScreen()));
+      },
       style: TextButton.styleFrom(
         primary: Color(0x5FFFFFFF), // background
       ),

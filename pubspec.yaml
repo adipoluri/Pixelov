@@ -36,6 +36,7 @@ dependencies:
   hive_flutter: ^1.0.0
   flutter_glow: ^0.2.0
   image: ^3.0.2
+  flame: ^0.29.4
   
 dev_dependencies:
   flutter_test:
@@ -51,9 +52,11 @@ flutter:
 
     #images
     - assets/images/
+    - assets/images/player/
     - assets/images/raidbutton.png
     - assets/images/badlandsbutton.png
     - assets/images/itemImages/
+    - assets/images/player/player.gif
     - assets/data/items.json
 
   fonts:

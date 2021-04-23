@@ -29,6 +29,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
       await Firebase.initializeApp();
       await dBhandler.initDB();
       await dBhandler.initData();
+      //await dBhandler.initImages();
       await timer();
       setState(() {
         _initialised = true;

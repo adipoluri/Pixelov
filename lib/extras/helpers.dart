@@ -101,3 +101,17 @@ Route transitionRoute(Widget widget) {
     },
   );
 }
+
+Route badLandsRoute(Widget widget) {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => widget,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return FadeTransition(
+        opacity: animation,
+        child: child,
+      );
+    },
+    transitionDuration: const Duration(seconds: 3, milliseconds: 500),
+    barrierColor: Colors.black,
+  );
+}
