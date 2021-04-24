@@ -28,7 +28,7 @@ class MoneyBar extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  roubles.toString(),
+                  "$roubles",
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     decoration: TextDecoration.none,
@@ -52,7 +52,7 @@ class MoneyBar extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  bitcoin.toString(),
+                  "$bitcoin",
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     decoration: TextDecoration.none,

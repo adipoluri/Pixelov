@@ -87,7 +87,7 @@ showAlertDialog(BuildContext context, String title, String content) {
 }
 
 Future<String> timer() {
-  return new Future.delayed(const Duration(seconds: 1), () => "1");
+  return new Future.delayed(const Duration(seconds: 2), () => "1");
 }
 
 Route transitionRoute(Widget widget) {
@@ -113,5 +113,56 @@ Route badLandsRoute(Widget widget) {
     },
     transitionDuration: const Duration(seconds: 2, milliseconds: 500),
     barrierColor: Colors.black,
+  );
+}
+
+Container loadingScreen() {
+  return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage("assets/images/launch.png"),
+        fit: BoxFit.fill,
+      ),
+    ),
+    child: Center(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
+        child: CircularProgressIndicator(
+          strokeWidth: 5,
+          valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+          backgroundColor: Color(COLOR_PRIMARY),
+        ),
+      ),
+    ),
+  );
+}
+
+MaterialApp errorScreen() {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        color: Color(COLOR_PRIMARY),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.error_outline,
+              color: Colors.red,
+              size: 50,
+            ),
+            SizedBox(height: 16),
+            Text(
+              'Error while launching game! Check your internet connection and restart!',
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontFamily: 'Minecraft',
+                fontSize: 25,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+    ),
   );
 }

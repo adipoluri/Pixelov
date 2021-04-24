@@ -24,7 +24,8 @@ class UserAdapter extends TypeAdapter<User> {
       daily: fields[5] as DailyReward,
       raidTimers: fields[6] as RaidTimer,
       inventory: fields[7] as Inventory,
-    )..wallet = fields[8] as Wallet;
+      wallet: fields[8] as Wallet,
+    );
   }
 
   @override

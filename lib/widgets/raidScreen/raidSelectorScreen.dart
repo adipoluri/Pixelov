@@ -24,11 +24,37 @@ class _RaidSelectorScreenState extends State<RaidSelectorScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
+        child: Stack(
+          children: [
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  new Container(
+                    color: const Color(0xFF878787),
+                    width: width,
+                    height: 1.0,
+                    margin: const EdgeInsets.symmetric(vertical: 16.0),
+                  ),
+                  Wrap(
+                    runSpacing: 32,
+                    children: [
+                      RaidChooserColumn(),
+                      badLandsButton(
+                        context,
+                        "Bad Lands",
+                        width,
+                        height,
+                        'assets/images/badlands2.png',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 32.0),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   IconButton(
@@ -40,27 +66,8 @@ class _RaidSelectorScreenState extends State<RaidSelectorScreen> {
                   )
                 ],
               ),
-              new Container(
-                color: const Color(0xFF878787),
-                width: width,
-                height: 1.0,
-                margin: const EdgeInsets.symmetric(vertical: 16.0),
-              ),
-              Wrap(
-                runSpacing: 32,
-                children: [
-                  RaidChooserColumn(),
-                  badLandsButton(
-                    context,
-                    "Bad Lands",
-                    width,
-                    height,
-                    'assets/images/badlandsbutton.png',
-                  ),
-                ],
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

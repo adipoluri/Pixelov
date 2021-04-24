@@ -55,6 +55,7 @@ flutter:
     - assets/images/player/
     - assets/images/raidbutton.png
     - assets/images/badlandsbutton.png
+    - assets/images/badlands2.png
     - assets/images/itemImages/
     - assets/images/player/player.gif
     - assets/data/items.json

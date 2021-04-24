@@ -49,49 +49,11 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
     ]);
 
     if (_error) {
-      return MaterialApp(
-        home: Scaffold(
-          body: Container(
-            color: Colors.white,
-            child: Center(
-                child: Column(
-              children: [
-                Icon(
-                  Icons.error_outline,
-                  color: Colors.red,
-                  size: 25,
-                ),
-                SizedBox(height: 16),
-                Text(
-                  'Failed to initialise firebase!',
-                  style: TextStyle(color: Colors.red, fontSize: 25),
-                ),
-              ],
-            )),
-          ),
-        ),
-      );
+      return errorScreen();
     }
 
     if (!_initialised) {
-      return Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/launch.png"),
-            fit: BoxFit.fill,
-          ),
-        ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
-            child: CircularProgressIndicator(
-              strokeWidth: 5,
-              valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
-              backgroundColor: Color(COLOR_PRIMARY),
-            ),
-          ),
-        ),
-      );
+      return loadingScreen();
     }
 
     return MultiProvider(
@@ -152,50 +114,45 @@ class AuthenticationWrapper extends StatefulWidget {
 
 class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
   final firebaseUser = null;
-  bool _ready = false;
-  Widget mainWidget;
+  bool _timerDone = false;
+  bool _initialised = false;
 
   @override
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<auth.User>();
-    if (!_ready) {
-      return Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/launch.png"),
-            fit: BoxFit.fill,
-          ),
-        ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
-            child: CircularProgressIndicator(
-              strokeWidth: 5,
-              valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
-              backgroundColor: Color(COLOR_PRIMARY),
-            ),
-          ),
-        ),
-      );
+    if (!_timerDone) {
+      return loadingScreen();
     }
-    if (firebaseUser != null) {
-      MyAppState.dBhandler.setCurrentUser();
+
+    if (firebaseUser == null) {
+      return AuthScreen();
+    }
+
+    waitForUser();
+    if (_initialised) {
       return MainMenu();
     } else {
-      return AuthScreen();
+      return loadingScreen();
     }
   }
 
   @override
   void initState() {
-    waitForUser();
+    waitForTimer();
     super.initState();
   }
 
-  void waitForUser() async {
+  void waitForTimer() async {
     await timer();
     setState(() {
-      _ready = true;
+      _timerDone = true;
+    });
+  }
+
+  waitForUser() async {
+    await MyAppState.dBhandler.setCurrentUser();
+    setState(() {
+      _initialised = true;
     });
   }
 }

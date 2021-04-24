@@ -12,57 +12,76 @@ class BadLandsScreen extends StatefulWidget {
 
 class _BadLandsScreenState extends State<BadLandsScreen> {
   String playerState;
+  int roubles;
+  int bitcoin;
+  int _clickCount;
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width - 50;
     double height = (MediaQuery.of(context).size.height / 4);
 
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/images/badlands.png"),
-          fit: BoxFit.cover,
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/badlands.png"),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: Stack(
-        children: [
-          Center(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
+          children: [
+            Center(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: new Image(
+                      image: new AssetImage(this.playerState),
+                      height: 112,
+                      width: 150,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: new Image(
-                    image: new AssetImage(this.playerState),
-                    height: 112,
-                    width: 150,
-                    fit: BoxFit.fill,
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Center(
+                    child: shootButton(context, width, height),
                   ),
                 ),
               ],
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: Center(
-                  child: shootButton(context, width, height),
-                ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                new MoneyBar(roubles, bitcoin),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 32.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.arrow_back),
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  )
+                ],
               ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              new MoneyBar(MyAppState.dBhandler.currentUser.wallet.roubles,
-                  MyAppState.dBhandler.currentUser.wallet.bitcoin),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -74,6 +93,7 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
         setState(() {
           this.playerState = SHOOT_PLAYER;
           shootingCallback();
+          processShoot();
         });
       },
       style: ElevatedButton.styleFrom(
@@ -96,7 +116,7 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
                   decoration: TextDecoration.none,
                   fontFamily: 'Minecraft',
                   color: Color(0xFFE9E8D3),
-                  fontSize: 45,
+                  fontSize: 65,
                 ),
               )
             ],
@@ -109,6 +129,8 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
   @override
   void initState() {
     this.playerState = DEF_PLAYER;
+    this.roubles = MyAppState.dBhandler.currentUser.wallet.roubles;
+    this.bitcoin = MyAppState.dBhandler.currentUser.wallet.bitcoin;
     super.initState();
   }
 
@@ -116,6 +138,17 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
     await Future.delayed(Duration(milliseconds: 140));
     setState(() {
       this.playerState = DEF_PLAYER;
+    });
+  }
+
+  processShoot() {
+    MyAppState.dBhandler.currentUser.wallet.roubles++;
+    if (_clickCount == 500) {
+      MyAppState.dBhandler.currentUser.wallet.bitcoin++;
+    }
+    setState(() {
+      this.roubles = MyAppState.dBhandler.currentUser.wallet.roubles;
+      this.bitcoin = MyAppState.dBhandler.currentUser.wallet.bitcoin;
     });
   }
 }
