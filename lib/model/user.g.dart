@@ -24,13 +24,13 @@ class UserAdapter extends TypeAdapter<User> {
       daily: fields[5] as DailyReward,
       raidTimers: fields[6] as RaidTimer,
       inventory: fields[7] as Inventory,
-    );
+    )..wallet = fields[8] as Wallet;
   }
 
   @override
   void write(BinaryWriter writer, User obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(8)
       ..writeByte(0)
       ..write(obj.lastOnlineTimestamp)
       ..writeByte(1)
@@ -44,7 +44,9 @@ class UserAdapter extends TypeAdapter<User> {
       ..writeByte(6)
       ..write(obj.raidTimers)
       ..writeByte(7)
-      ..write(obj.inventory);
+      ..write(obj.inventory)
+      ..writeByte(8)
+      ..write(obj.wallet);
   }
 
   @override

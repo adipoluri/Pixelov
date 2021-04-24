@@ -1,8 +1,9 @@
-import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 import 'package:pixelov/extras/constants.dart';
+import 'package:pixelov/extras/moneyBar.dart';
+import 'package:pixelov/main.dart';
 
 class BadLandsScreen extends StatefulWidget {
   @override
@@ -52,7 +53,15 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
                 ),
               ),
             ],
-          )
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              new MoneyBar(MyAppState.dBhandler.currentUser.wallet.roubles,
+                  MyAppState.dBhandler.currentUser.wallet.bitcoin),
+            ],
+          ),
         ],
       ),
     );

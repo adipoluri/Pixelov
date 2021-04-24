@@ -14,6 +14,7 @@ import 'package:pixelov/model/item.dart';
 import 'package:pixelov/model/user.dart';
 import 'package:pixelov/model/inventory.dart';
 import 'package:pixelov/model/inventorySlot.dart';
+import 'package:pixelov/model/wallet.dart';
 import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
 
 class DBHandler {
@@ -28,6 +29,7 @@ class DBHandler {
     Hive.registerAdapter(TimeAdapter());
     Hive.registerAdapter(InventoryAdapter());
     Hive.registerAdapter(InventorySlotAdapter());
+    Hive.registerAdapter(WalletAdapter());
   }
 
   initData() async {
@@ -74,6 +76,7 @@ class DBHandler {
         currency: <InventorySlot>[],
         valuables: <InventorySlot>[],
       ),
+      wallet: new Wallet(roubles: 0, bitcoin: 0),
     );
 
     final box = await Hive.openBox<User>('currentUser');
