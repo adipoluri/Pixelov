@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 const COLOR_PRIMARY = 0xFF4E4E4E;
 const String API_KEY = "maa5OwaDmLmuCx73";
+const DEF_PLAYER = "assets/images/player/1.png";
+const SHOOT_PLAYER = "assets/images/player/player.gif";
 
 DateTime defaultTime() {
   return new DateTime(2001, 12, 6);

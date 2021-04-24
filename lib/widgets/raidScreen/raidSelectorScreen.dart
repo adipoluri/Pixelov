@@ -14,7 +14,7 @@ class _RaidSelectorScreenState extends State<RaidSelectorScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width - 50;
-    double height = (MediaQuery.of(context).size.height / 3) - 180;
+    double height = (MediaQuery.of(context).size.height / 3) - 120;
 
     return Scaffold(
       body: Container(

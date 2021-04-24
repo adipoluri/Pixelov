@@ -111,7 +111,7 @@ Route badLandsRoute(Widget widget) {
         child: child,
       );
     },
-    transitionDuration: const Duration(seconds: 3, milliseconds: 500),
+    transitionDuration: const Duration(seconds: 2, milliseconds: 500),
     barrierColor: Colors.black,
   );
 }
