@@ -176,8 +176,13 @@ class _DailyRewardWidgetState extends State<DailyRewardWidget> {
       onPressed: () {
         MyAppState.dBhandler.currentUser.daily.collect();
         isDailyRewardReady();
-        showAlertDialog(context, "Daily Reward", "Daily Reward Collected!");
-        MyAppState.dBhandler.currentUser.addRandomItem();
+        String uid = MyAppState.dBhandler.currentUser.addRandomItem();
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return dailyRewardReady(context, uid);
+          },
+        );
       },
       style: ElevatedButton.styleFrom(
         primary: Color(0xFF474747), // background
@@ -205,6 +210,50 @@ class _DailyRewardWidgetState extends State<DailyRewardWidget> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Dialog dailyRewardReady(BuildContext context, String uid) {
+    return Dialog(
+      backgroundColor: Colors.transparent,
+      insetPadding: EdgeInsets.all(10),
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            height: 400,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Color(COLOR_PRIMARY),
+            ),
+            padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
+            child: Column(
+              children: [
+                Text(
+                  "You got this Item!",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Minecraft',
+                    color: Color(0xFFE9E8D3),
+                    fontSize: 40,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 16),
+                Image(
+                  image: new AssetImage(
+                      "assets/images/itemImages/" + uid + ".png"),
+                  height: 200,
+                  width: 200,
+                  fit: BoxFit.contain,
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

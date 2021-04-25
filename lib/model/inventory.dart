@@ -232,7 +232,7 @@ class Inventory extends HiveObject {
     }
   }
 
-  void getRandomItem() {
+  String getRandomItem() {
     Random random = new Random();
     int randomNumber = random.nextInt(8) + 1;
     int randomItemIndex =
@@ -241,9 +241,10 @@ class Inventory extends HiveObject {
     for (Item item in DBHandler.items[randomNumber].items.values) {
       if (counter == randomItemIndex) {
         this.addItem(item.uid, item.category);
-        break;
+        return item.uid;
       }
       counter++;
     }
+    return null;
   }
 }

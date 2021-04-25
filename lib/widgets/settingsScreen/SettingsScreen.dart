@@ -104,6 +104,30 @@ class SettingsScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Text(
+              "PRESTIGE",
+              style: headerStyle,
+            ),
+            Card(
+              margin: const EdgeInsets.symmetric(
+                vertical: 8.0,
+                horizontal: 0,
+              ),
+              child: Column(
+                children: <Widget>[
+                  SwitchListTile(
+                    activeColor: Colors.green,
+                    value: false,
+                    title: Text(
+                      "Prestige your Account",
+                      style: subtextStyle,
+                    ),
+                    onChanged: (val) {},
+                  ),
+                  _buildDivider(),
+                ],
+              ),
+            ),
             Card(
               margin: const EdgeInsets.symmetric(
                 vertical: 8.0,

@@ -69,14 +69,6 @@ class MainMenu extends StatelessWidget {
             ),
           ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            new MoneyBar(MyAppState.dBhandler.currentUser.wallet.roubles,
-                MyAppState.dBhandler.currentUser.wallet.bitcoin),
-          ],
-        ),
       ],
     );
   }
@@ -129,7 +121,6 @@ class MainMenu extends StatelessWidget {
   }
 
   FloatingActionButton rewardButton(BuildContext context) {
-    //TODO: add Daily Gift Changes
     return FloatingActionButton(
       heroTag: "daily",
       child: Icon(Icons.redeem),

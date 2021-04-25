@@ -50,7 +50,7 @@ class User extends HiveObject {
     this.inventory.removeItem(uid, category);
   }
 
-  void addRandomItem() {
-    this.inventory.getRandomItem();
+  String addRandomItem() {
+    return this.inventory.getRandomItem();
   }
 }

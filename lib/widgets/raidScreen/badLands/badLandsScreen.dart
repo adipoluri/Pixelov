@@ -4,6 +4,8 @@ import 'package:flutter_glow/flutter_glow.dart';
 import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/extras/moneyBar.dart';
 import 'package:pixelov/main.dart';
+import 'package:pixelov/model/item.dart';
+import 'package:pixelov/logic/badlandsLogic.dart';
 
 class BadLandsScreen extends StatefulWidget {
   @override
@@ -131,6 +133,7 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
     this.playerState = DEF_PLAYER;
     this.roubles = MyAppState.dBhandler.currentUser.wallet.roubles;
     this.bitcoin = MyAppState.dBhandler.currentUser.wallet.bitcoin;
+    _clickCount = 0;
     super.initState();
   }
 
@@ -142,9 +145,13 @@ class _BadLandsScreenState extends State<BadLandsScreen> {
   }
 
   processShoot() {
+    _clickCount++;
     MyAppState.dBhandler.currentUser.wallet.roubles++;
     if (_clickCount == 500) {
       MyAppState.dBhandler.currentUser.wallet.bitcoin++;
+    }
+    if (_clickCount % 25 == 0) {
+      badLandsReward(_clickCount, context);
     }
     setState(() {
       this.roubles = MyAppState.dBhandler.currentUser.wallet.roubles;
