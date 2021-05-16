@@ -11,7 +11,7 @@ class InventorySCreen extends StatelessWidget {
       length: 8,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF4E4E4E),
+          backgroundColor: Color(COLOR_PRIMARY),
           title: Text(
             "Inventory",
             style: TextStyle(

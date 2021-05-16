@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_glow/flutter_glow.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
 import 'package:pixelov/widgets/raidScreen/badLands/badLandsScreen.dart';
@@ -130,20 +131,28 @@ class RaidChooserColumn extends StatefulWidget {
 
 class _RaidChooserColumnState extends State<RaidChooserColumn> {
   Widget _choice;
-  int _timeLeftMins;
-  int _timeLeftHours;
-  bool _finished;
+  bool _finished = false;
+  String _timeLeft;
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width - 50;
     double height = (MediaQuery.of(context).size.height / 3) - 180;
 
-    if (MyAppState.dBhandler.currentUser.raidTimers.pmcRaid ||
-        MyAppState.dBhandler.currentUser.raidTimers.scavRaid) {
+    if (_finished) {
+      _choice = raidFinishedButton(
+        context,
+        MyAppState.dBhandler.currentUser.raid.raidCat,
+        width,
+        height,
+        'assets/images/raidbutton.png',
+      );
+    } else if (MyAppState.dBhandler.currentUser.raid.pmcRaid ||
+        MyAppState.dBhandler.currentUser.raid.scavRaid) {
       _choice = inRaidButton(
         context,
-        "Runs",
+        MyAppState.dBhandler.currentUser.raid.raidCat,
+        _timeLeft,
         width,
         height,
         'assets/images/raidbutton.png',
@@ -167,17 +176,17 @@ class _RaidChooserColumnState extends State<RaidChooserColumn> {
   }
 
   void isRaidTimerDone() {
-    if (MyAppState.dBhandler.currentUser.raidTimers.inRaid()) {
-      if (!MyAppState.dBhandler.currentUser.raidTimers.isRaidTimerDone()) {
+    if (MyAppState.dBhandler.currentUser.raid.inRaid()) {
+      if (MyAppState.dBhandler.currentUser.raid.isRaidTimerDone()) {
         setState(() {
-          _timeLeftHours =
-              MyAppState.dBhandler.currentUser.raidTimers.hoursLeft();
-          _timeLeftMins =
-              MyAppState.dBhandler.currentUser.raidTimers.minsLeft();
+          _finished = true;
         });
       } else {
         setState(() {
-          _finished = true;
+          Duration difference = MyAppState
+              .dBhandler.currentUser.raid.raidDuration
+              .difference(DateTime.now());
+          _timeLeft = difference.toString().substring(0, 8);
         });
       }
     }
@@ -205,9 +214,10 @@ class _RaidChooserColumnState extends State<RaidChooserColumn> {
           ),
           boxShadow: <BoxShadow>[
             new BoxShadow(
-                color: Colors.black38,
-                blurRadius: 10.0,
-                offset: new Offset(0.0, 10.0))
+              color: Colors.black38,
+              blurRadius: 10.0,
+              offset: new Offset(0.0, 10.0),
+            )
           ],
         ),
         child: Padding(
@@ -232,11 +242,11 @@ class _RaidChooserColumnState extends State<RaidChooserColumn> {
     );
   }
 
-  TextButton inRaidButton(BuildContext context, String title, double width,
-      double height, String path) {
+  TextButton inRaidButton(BuildContext context, String title, String time,
+      double width, double height, String path) {
     return TextButton(
       onPressed: () {
-        //Navigator.push(context, transitionRoute(widget));
+        isRaidTimerDone();
       },
       style: TextButton.styleFrom(
         primary: Color(0x00FFFFFF), // background
@@ -266,6 +276,85 @@ class _RaidChooserColumnState extends State<RaidChooserColumn> {
             children: [
               Text(
                 title,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Minecraft',
+                  color: Colors.white,
+                  fontSize: 40,
+                ),
+              ),
+              GlowText(
+                "$time left",
+                blurRadius: 3,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Minecraft',
+                  color: Colors.white,
+                  fontSize: 40,
+                ),
+              ),
+              Text(
+                "Click to refresh",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Minecraft',
+                  color: Colors.grey,
+                  fontSize: 12,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  TextButton raidFinishedButton(BuildContext context, String title,
+      double width, double height, String path) {
+    return TextButton(
+      onPressed: null,
+      style: TextButton.styleFrom(
+        primary: Color(0x00FFFFFF), // background
+      ),
+      child: Container(
+        width: width,
+        decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
+          borderRadius: new BorderRadius.circular(24.0),
+          image: DecorationImage(
+            colorFilter: new ColorFilter.mode(
+                Colors.black.withOpacity(0.7), BlendMode.dstATop),
+            image: AssetImage(path),
+            fit: BoxFit.cover,
+          ),
+          boxShadow: <BoxShadow>[
+            new BoxShadow(
+                color: Colors.black38,
+                blurRadius: 10.0,
+                offset: new Offset(0.0, 10.0))
+          ],
+        ),
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(0, height, 0, height),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Minecraft',
+                  color: Colors.white,
+                  fontSize: 40,
+                ),
+              ),
+              Text(
+                "Raid Summary",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   decoration: TextDecoration.none,

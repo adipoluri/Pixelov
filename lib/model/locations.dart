@@ -48,7 +48,7 @@ class Locations {
       image: 'assets/images/shoreline.png',
     ),
     const Location(
-      id: "5",
+      id: "6",
       name: "Reserve",
       raidHours: 6,
       raidMins: 0,
@@ -57,7 +57,7 @@ class Locations {
       image: 'assets/images/reserve.png',
     ),
     const Location(
-      id: "5",
+      id: "7",
       name: "Labs",
       raidHours: 12,
       raidMins: 0,
@@ -66,7 +66,7 @@ class Locations {
       image: 'assets/images/labs.png',
     ),
     const Location(
-      id: "5",
+      id: "8",
       name: "Streets of Pixelov",
       raidHours: 24,
       raidMins: 0,
@@ -78,5 +78,9 @@ class Locations {
 
   static Location getLocationById(id) {
     return locations.where((p) => p.id == id).first;
+  }
+
+  static Location getLocationByName(name) {
+    return locations.where((p) => p.name == name).first;
   }
 }

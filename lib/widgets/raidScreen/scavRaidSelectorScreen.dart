@@ -8,7 +8,7 @@ class ScavRaidSelectorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF4E4E4E),
+        backgroundColor: Color(0xFF141215),
         title: Text(
           "Pick a location!",
           style: TextStyle(

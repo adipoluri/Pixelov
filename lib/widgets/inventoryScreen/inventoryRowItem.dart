@@ -28,7 +28,7 @@ class InventoryRowItem extends StatelessWidget {
     final inventoryCard = new Container(
       margin: const EdgeInsets.only(left: 72.0, right: 24.0),
       decoration: new BoxDecoration(
-        color: Color(0xFF4E4E4E),
+        color: Color(COLOR_PRIMARY),
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(8.0),
         boxShadow: <BoxShadow>[

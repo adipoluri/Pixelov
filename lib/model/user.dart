@@ -1,5 +1,6 @@
 import 'package:hive/hive.dart';
-import 'package:pixelov/model/raidTimer.dart';
+import 'package:pixelov/model/experience.dart';
+import 'package:pixelov/model/raid.dart';
 import 'package:pixelov/model/inventory.dart';
 import 'package:pixelov/model/wallet.dart';
 import 'package:pixelov/widgets/mainMenuScreen/dailyRewardsPopup/dailyReward.dart';
@@ -19,11 +20,13 @@ class User extends HiveObject {
   @HiveField(5)
   DailyReward daily;
   @HiveField(6)
-  RaidTimer raidTimers;
-  @HiveField(7)
   Inventory inventory;
-  @HiveField(8)
+  @HiveField(7)
   Wallet wallet;
+  @HiveField(8)
+  Raid raid;
+  @HiveField(9)
+  Experience experience;
 
   User(
       {this.lastOnlineTimestamp,
@@ -31,9 +34,10 @@ class User extends HiveObject {
       this.userID = '',
       this.active = false,
       this.daily,
-      this.raidTimers,
       this.inventory,
-      this.wallet});
+      this.wallet,
+      this.raid,
+      this.experience});
 
   void updateUser() {
     //Update DailyReward

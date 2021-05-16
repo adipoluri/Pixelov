@@ -46,8 +46,7 @@ class MainMenu extends StatelessWidget {
                       backgroundColor: Colors.black,
                       foregroundColor: Colors.white,
                       onPressed: () {
-                        //Navigator.push(context, transitionRoute(InfoScreen()));
-                        //MyAppState.dBhandler.currentUser.addRandomItem();
+                        MyAppState.dBhandler.currentUser.raid.scavRaid = false;
                       },
                     ),
                     rewardButton(context),

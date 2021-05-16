@@ -8,7 +8,8 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/model/category.dart';
-import 'package:pixelov/model/raidTimer.dart';
+import 'package:pixelov/model/experience.dart';
+import 'package:pixelov/model/raid.dart';
 import 'package:pixelov/model/time.dart';
 import 'package:pixelov/model/item.dart';
 import 'package:pixelov/model/user.dart';
@@ -23,13 +24,14 @@ class DBHandler {
 
   initDB() async {
     await Hive.initFlutter();
-    Hive.registerAdapter(UserAdapter());
-    Hive.registerAdapter(RaidTimerAdapter());
-    Hive.registerAdapter(DailyAdapter());
-    Hive.registerAdapter(TimeAdapter());
-    Hive.registerAdapter(InventoryAdapter());
-    Hive.registerAdapter(InventorySlotAdapter());
-    Hive.registerAdapter(WalletAdapter());
+    Hive.registerAdapter(UserAdapter()); //1
+    Hive.registerAdapter(DailyAdapter()); //2
+    Hive.registerAdapter(ExperienceAdapter()); //3
+    Hive.registerAdapter(RaidAdapter()); //4
+    Hive.registerAdapter(TimeAdapter()); //5
+    Hive.registerAdapter(InventoryAdapter()); //6
+    Hive.registerAdapter(InventorySlotAdapter()); //7
+    Hive.registerAdapter(WalletAdapter()); //8
   }
 
   initData() async {
@@ -61,10 +63,6 @@ class DBHandler {
       userID: uid,
       active: true,
       daily: new DailyReward(lastRewardTimestamp: defaultTime()),
-      raidTimers: new RaidTimer(
-        scavTimer: defaultTime(),
-        pmcTimer: defaultTime(),
-      ),
       inventory: new Inventory(
         key: <InventorySlot>[],
         gear: <InventorySlot>[],
@@ -77,6 +75,13 @@ class DBHandler {
         valuables: <InventorySlot>[],
       ),
       wallet: new Wallet(roubles: 0, bitcoin: 0),
+      raid: new Raid(
+          scavRaid: false,
+          pmcRaid: false,
+          raidDuration: defaultTime(),
+          raidCat: "N/A"),
+      experience:
+          new Experience(level: 1, experience: 0, expModifier: 1, expCap: 150),
     );
 
     final box = await Hive.openBox<User>('currentUser');

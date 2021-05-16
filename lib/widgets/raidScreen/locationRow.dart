@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_glow/flutter_glow.dart';
 import 'package:pixelov/extras/constants.dart';
+import 'package:pixelov/extras/helpers.dart';
+import 'package:pixelov/main.dart';
 import 'package:pixelov/model/location.dart';
+import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
+import 'package:pixelov/widgets/raidScreen/raidSelectorScreen.dart';
 
 class LocationRow extends StatelessWidget {
   final Location location;
@@ -11,7 +16,7 @@ class LocationRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final locationCard = new Container(
       decoration: new BoxDecoration(
-        color: Color(0xFF4E4E4E),
+        color: Color(COLOR_PRIMARY),
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(8.0),
         boxShadow: <BoxShadow>[
@@ -36,7 +41,7 @@ class LocationRow extends StatelessWidget {
             new Text(location.name, style: TextStyles.locationTitle),
             new Text(location.description, style: TextStyles.locationSubText),
             new Container(
-              color: const Color(0xFF878787),
+              color: const Color(COLOR_PRIMARY),
               width: 24.0,
               height: 1.0,
               margin: const EdgeInsets.symmetric(vertical: 8.0),
@@ -62,12 +67,164 @@ class LocationRow extends StatelessWidget {
       margin: const EdgeInsets.only(top: 16.0, bottom: 8.0),
       child: new TextButton(
         onPressed: () {
-          //Navigator.push(context, transitionRoute(widget));
+          Navigator.push(context, transitionRoute(raidInfo(context)));
         },
         child: new Stack(
           children: <Widget>[
             locationCard,
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget raidInfo(BuildContext context) {
+    double width = MediaQuery.of(context).size.width - 120;
+    double height = MediaQuery.of(context).size.height / 3;
+
+    return DefaultTabController(
+      length: 2,
+      child: Container(
+        width: double.infinity,
+        height: 400,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Color(COLOR_PRIMARY),
+          image: DecorationImage(
+            image: AssetImage("assets/images/raid.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Color(COLOR_PRIMARY),
+            title: Text(
+              "${location.name} Raid",
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                decoration: TextDecoration.none,
+                fontFamily: 'Minecraft',
+                color: Colors.white,
+                fontSize: 30,
+              ),
+            ),
+            bottom: TabBar(
+              indicatorColor: Colors.white,
+              tabs: [
+                Tab(text: "SCAV"),
+                Tab(text: "PMC"),
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(location.image),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Scav Raid",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Minecraft',
+                        color: Colors.white,
+                        fontSize: 45,
+                      ),
+                    ),
+                    new Container(
+                      height: 24.0,
+                    ),
+                    new Text(
+                      "Estimated Raid Time:",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Minecraft',
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    new Container(
+                      height: 12.0,
+                    ),
+                    new Text(
+                      "${location.raidHours}h ${location.raidMins}m",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Minecraft',
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                    ),
+                    new Container(
+                      color: const Color(COLOR_PRIMARY),
+                      width: width,
+                      height: 1.0,
+                      margin: const EdgeInsets.symmetric(vertical: 24.0),
+                    ),
+                    launchButton(context, width, height)
+                  ],
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(location.image),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  ElevatedButton launchButton(
+      BuildContext context, double width, double height) {
+    return ElevatedButton(
+      onPressed: () {
+        MyAppState.dBhandler.currentUser.raid.startScavRaid(location.name);
+        Navigator.pop(context);
+        Navigator.pop(context);
+        pushAndRemoveUntil(context, MainMenu(), false);
+      },
+      style: ElevatedButton.styleFrom(
+        primary: Color(COLOR_PRIMARY), // background
+        onPrimary: Color(0xFFE9E9E9), // foreground
+      ),
+      child: Container(
+        width: width,
+        height: height,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GlowText(
+                "Start Raid",
+                blurRadius: 50,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Minecraft',
+                  color: Color(0xFFE9E8D3),
+                  fontSize: 65,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
