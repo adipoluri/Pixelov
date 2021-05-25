@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixelov/main.dart';
 import 'package:pixelov/model/locations.dart';
 
 import 'locationRow.dart';
@@ -30,8 +31,8 @@ class ScavRaidSelectorScreen extends StatelessWidget {
         child: new ListView.builder(
           itemExtent: 160.0,
           itemCount: Locations.locations.length,
-          itemBuilder: (_, index) =>
-              new LocationRow(Locations.locations[index]),
+          itemBuilder: (_, index) => new LocationRow(Locations.locations[index],
+              MyAppState.dBhandler.currentUser.experience.level),
         ),
       ),
     );

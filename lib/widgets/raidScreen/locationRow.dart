@@ -4,13 +4,12 @@ import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
 import 'package:pixelov/model/location.dart';
-import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
-import 'package:pixelov/widgets/raidScreen/raidSelectorScreen.dart';
 
 class LocationRow extends StatelessWidget {
   final Location location;
+  final int level;
 
-  LocationRow(this.location);
+  LocationRow(this.location, this.level);
 
   @override
   Widget build(BuildContext context) {
@@ -62,18 +61,49 @@ class LocationRow extends StatelessWidget {
       ),
     );
 
+    final locationCardExtra = new Container(
+      decoration: new BoxDecoration(
+        color: Color(COLOR_PRIMARY).withAlpha(200),
+        shape: BoxShape.rectangle,
+        borderRadius: new BorderRadius.circular(8.0),
+      ),
+      constraints: new BoxConstraints.expand(),
+      child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          new Text("Unlock ${location.name} at level ${location.minLevel}",
+              style: TextStyles.locationSubText),
+        ],
+      ),
+    );
+
+    Stack retVal;
+    if (this.level >= location.minLevel) {
+      retVal = new Stack(
+        children: <Widget>[
+          locationCard,
+        ],
+      );
+    } else {
+      retVal = new Stack(
+        children: <Widget>[
+          locationCard,
+          locationCardExtra,
+        ],
+      );
+    }
+
     return new Container(
       height: 120.0,
       margin: const EdgeInsets.only(top: 16.0, bottom: 8.0),
       child: new TextButton(
         onPressed: () {
-          Navigator.push(context, transitionRoute(raidInfo(context)));
+          if (this.level >= location.minLevel) {
+            Navigator.push(context, transitionRoute(raidInfo(context)));
+          }
         },
-        child: new Stack(
-          children: <Widget>[
-            locationCard,
-          ],
-        ),
+        child: retVal,
       ),
     );
   }
@@ -84,107 +114,100 @@ class LocationRow extends StatelessWidget {
 
     return DefaultTabController(
       length: 2,
-      child: Container(
-        width: double.infinity,
-        height: 400,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Color(COLOR_PRIMARY),
-          image: DecorationImage(
-            image: AssetImage("assets/images/raid.png"),
-            fit: BoxFit.cover,
-          ),
-        ),
-        padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Color(COLOR_PRIMARY),
-            title: Text(
-              "${location.name} Raid",
-              style: TextStyle(
-                fontWeight: FontWeight.normal,
-                decoration: TextDecoration.none,
-                fontFamily: 'Minecraft',
-                color: Colors.white,
-                fontSize: 30,
-              ),
-            ),
-            bottom: TabBar(
-              indicatorColor: Colors.white,
-              tabs: [
-                Tab(text: "SCAV"),
-                Tab(text: "PMC"),
-              ],
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(COLOR_PRIMARY),
+          title: Text(
+            "${location.name} Raid",
+            style: TextStyle(
+              fontWeight: FontWeight.normal,
+              decoration: TextDecoration.none,
+              fontFamily: 'Minecraft',
+              color: Colors.white,
+              fontSize: 30,
             ),
           ),
-          body: TabBarView(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(location.image),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Scav Raid",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Minecraft',
-                        color: Colors.white,
-                        fontSize: 45,
-                      ),
-                    ),
-                    new Container(
-                      height: 24.0,
-                    ),
-                    new Text(
-                      "Estimated Raid Time:",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Minecraft',
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
-                    ),
-                    new Container(
-                      height: 12.0,
-                    ),
-                    new Text(
-                      "${location.raidHours}h ${location.raidMins}m",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Minecraft',
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
-                    ),
-                    new Container(
-                      color: const Color(COLOR_PRIMARY),
-                      width: width,
-                      height: 1.0,
-                      margin: const EdgeInsets.symmetric(vertical: 24.0),
-                    ),
-                    launchButton(context, width, height)
-                  ],
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(location.image),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+          bottom: TabBar(
+            indicatorColor: Colors.white,
+            tabs: [
+              Tab(text: "SCAV"),
+              Tab(text: "PMC"),
             ],
           ),
+        ),
+        body: TabBarView(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Color(COLOR_PRIMARY),
+                image: DecorationImage(
+                  colorFilter: new ColorFilter.mode(
+                      Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                  image: AssetImage(location.image),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Scav Raid",
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Minecraft',
+                      color: Colors.white,
+                      fontSize: 45,
+                    ),
+                  ),
+                  new Container(
+                    height: 24.0,
+                  ),
+                  new Text(
+                    "Estimated Raid Time:",
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Minecraft',
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                  new Container(
+                    height: 12.0,
+                  ),
+                  new Text(
+                    "${location.raidHours}h ${location.raidMins}m",
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Minecraft',
+                      color: Colors.white,
+                      fontSize: 30,
+                    ),
+                  ),
+                  new Container(
+                    color: const Color(COLOR_PRIMARY),
+                    width: width,
+                    height: 1.0,
+                    margin: const EdgeInsets.symmetric(vertical: 24.0),
+                  ),
+                  launchButton(context, width, height),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Color(COLOR_PRIMARY),
+                image: DecorationImage(
+                  colorFilter: new ColorFilter.mode(
+                      Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                  image: AssetImage(location.image),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -197,7 +220,7 @@ class LocationRow extends StatelessWidget {
         MyAppState.dBhandler.currentUser.raid.startScavRaid(location.name);
         Navigator.pop(context);
         Navigator.pop(context);
-        pushAndRemoveUntil(context, MainMenu(), false);
+        Navigator.pop(context);
       },
       style: ElevatedButton.styleFrom(
         primary: Color(COLOR_PRIMARY), // background

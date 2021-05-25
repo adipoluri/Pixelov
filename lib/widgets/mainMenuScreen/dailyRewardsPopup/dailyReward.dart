@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 import 'package:hive/hive.dart';
 import 'package:pixelov/extras/constants.dart';
-import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
 
 part 'dailyReward.g.dart';

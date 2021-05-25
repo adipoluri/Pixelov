@@ -44,4 +44,8 @@ class Experience extends HiveObject {
     this.level++;
     this.expCap = this.expCap * 3;
   }
+
+  void addShootExp() {
+    this.experience += 1 * this.expModifier;
+  }
 }

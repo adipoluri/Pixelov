@@ -4,6 +4,7 @@ class Location {
   final int raidHours;
   final int raidMins;
   final int difficulty;
+  final int minLevel;
   final String description;
   final String image;
 
@@ -13,6 +14,7 @@ class Location {
       this.raidHours,
       this.raidMins,
       this.difficulty,
+      this.minLevel,
       this.description,
       this.image});
 }

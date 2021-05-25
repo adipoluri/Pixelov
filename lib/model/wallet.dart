@@ -13,4 +13,8 @@ class Wallet extends HiveObject {
     this.roubles,
     this.bitcoin,
   });
+
+  void addShootMoney() {
+    this.roubles = this.roubles + 1;
+  }
 }

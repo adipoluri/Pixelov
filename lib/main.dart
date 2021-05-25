@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/core/authScreen.dart';
 import 'package:pixelov/core/dbHandler.dart';
 import 'package:pixelov/core/authService.dart';

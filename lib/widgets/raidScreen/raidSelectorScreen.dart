@@ -64,7 +64,7 @@ class _RaidSelectorScreenState extends State<RaidSelectorScreen> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                  )
+                  ),
                 ],
               ),
             ),
@@ -297,7 +297,7 @@ class _RaidChooserColumnState extends State<RaidChooserColumn> {
                 ),
               ),
               Text(
-                "Click to refresh",
+                "Tap to refresh",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   decoration: TextDecoration.none,
