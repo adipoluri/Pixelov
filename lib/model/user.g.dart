@@ -18,7 +18,7 @@ class UserAdapter extends TypeAdapter<User> {
     };
     return User(
       lastOnlineTimestamp: fields[0] as DateTime,
-      email: fields[1] as String,
+      playerName: fields[1] as String,
       userID: fields[2] as String,
       active: fields[4] as bool,
       daily: fields[5] as DailyReward,
@@ -36,7 +36,7 @@ class UserAdapter extends TypeAdapter<User> {
       ..writeByte(0)
       ..write(obj.lastOnlineTimestamp)
       ..writeByte(1)
-      ..write(obj.email)
+      ..write(obj.playerName)
       ..writeByte(2)
       ..write(obj.userID)
       ..writeByte(4)

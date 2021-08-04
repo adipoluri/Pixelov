@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pixelov/extras/constants.dart';
-import 'package:pixelov/extras/helpers.dart';
-import 'package:pixelov/core/loginScreen.dart';
-import 'package:pixelov/core/signUpScreen.dart';
 
 class AuthScreen extends StatelessWidget {
   @override
@@ -53,7 +50,7 @@ class AuthScreen extends StatelessWidget {
                       fontFamily: 'Minecraft',
                       fontWeight: FontWeight.normal),
                 ),
-                onPressed: () => push(context, new LoginScreen()),
+                onPressed: null,
               ),
             ),
           ),
@@ -71,7 +68,7 @@ class AuthScreen extends StatelessWidget {
                       fontFamily: 'Minecraft',
                       color: Color(COLOR_PRIMARY)),
                 ),
-                onPressed: () => push(context, new SignUpScreen()),
+                onPressed: null,
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.white,
                   padding: EdgeInsets.only(top: 12, bottom: 12),

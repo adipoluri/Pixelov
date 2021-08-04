@@ -24,20 +24,14 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.0
   shared_preferences: ^2.0.4
-  firebase_core: ^1.0.3
-  firebase_auth: ^1.0.3
-  cloud_firestore: ^1.0.3
-  firebase_storage: ^8.0.3
   provider: ^5.0.0
-  page_transition: ^2.0.1-nullsafety.0
   hive: ^2.0.0
   hive_flutter: ^1.0.0
   flutter_glow: ^0.2.0
   image: ^3.0.2
-  flame: ^0.29.4
-  
+  desktop_window: ^0.4.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

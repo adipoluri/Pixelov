@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pixelov/core/authScreen.dart';
-import 'package:pixelov/core/authService.dart';
 import 'package:pixelov/extras/constants.dart';
 import 'package:pixelov/extras/helpers.dart';
 import 'package:pixelov/main.dart';
@@ -61,7 +60,7 @@ class SettingsScreen extends StatelessWidget {
                       backgroundImage: AssetImage("assets/images/raid.png"),
                     ),
                     title: Text(
-                      MyAppState.dBhandler.currentUser.email,
+                      MyAppState.dBhandler.currentUser.playerName,
                       style: subtextStyle,
                     ),
                     onTap: null,
@@ -128,25 +127,6 @@ class SettingsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Card(
-              margin: const EdgeInsets.symmetric(
-                vertical: 8.0,
-                horizontal: 0,
-              ),
-              child: ListTile(
-                leading: Icon(Icons.exit_to_app),
-                title: Text(
-                  "Logout",
-                  style: subtextStyle,
-                ),
-                onTap: () {
-                  signOut();
-                  MyAppState.dBhandler.clearDb();
-                  pushAndRemoveUntil(context, new AuthScreen(), false);
-                },
-              ),
-            ),
-            const SizedBox(height: 60.0),
           ],
         ),
       ),

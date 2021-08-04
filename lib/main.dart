@@ -1,15 +1,19 @@
-import 'package:firebase_auth/firebase_auth.dart' as auth;
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:pixelov/core/authScreen.dart';
 import 'package:pixelov/core/dbHandler.dart';
-import 'package:pixelov/core/authService.dart';
 import 'package:pixelov/extras/helpers.dart';
+import 'package:pixelov/model/user.dart';
 import 'package:pixelov/widgets/mainMenuScreen/MainMenu.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
+import 'package:desktop_window/desktop_window.dart';
 
-void main() => runApp(MyApp());
+void main() {
+   WidgetsFlutterBinding.ensureInitialized();
+   DesktopWindow.setWindowSize(Size(400,800));
+   DesktopWindow.setMinWindowSize(Size(400,800));
+   DesktopWindow.setMaxWindowSize(Size(400,800));
+
+  runApp(MyApp());
+}
+
 
 class MyApp extends StatefulWidget {
   @override
@@ -25,7 +29,6 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
   void initialiseFlutterFire() async {
     try {
       dBhandler = new DBHandler();
-      await Firebase.initializeApp();
       await dBhandler.initDB();
       await dBhandler.initData();
       //await dBhandler.initImages();
@@ -34,6 +37,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
         _initialised = true;
       });
     } catch (e) {
+      print(e.toString());
       setState(() {
         _error = true;
       });
@@ -42,10 +46,6 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
 
     if (_error) {
       return errorScreen();
@@ -55,21 +55,9 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
       return loadingScreen();
     }
 
-    return MultiProvider(
-      providers: [
-        Provider<AuthenticationService>(
-          create: (_) => AuthenticationService(auth.FirebaseAuth.instance),
-        ),
-        StreamProvider(
-          initialData: null,
-          create: (context) =>
-              context.read<AuthenticationService>().authStateChanges,
-        ),
-      ],
-      child: MaterialApp(
-        home: AuthenticationWrapper(),
-      ),
-    );
+    return MaterialApp(
+        home: AuthenticationWrapper());
+      
   }
 
   @override
@@ -84,25 +72,6 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (auth.FirebaseAuth.instance.currentUser != null &&
-        dBhandler.currentUser != null) {
-      if (state == AppLifecycleState.paused) {
-        //user offline
-        //tokenStream.pause();
-        dBhandler.currentUser.active = false;
-        dBhandler.currentUser.lastOnlineTimestamp = DateTime.now();
-        dBhandler.updateCurrentUser();
-      } else if (state == AppLifecycleState.resumed) {
-        //user online
-        //tokenStream.resume();
-        dBhandler.currentUser.active = true;
-        dBhandler.updateCurrentUser();
-      }
-    }
-  }
 }
 
 //Handles pathing between auth and main app
@@ -112,25 +81,20 @@ class AuthenticationWrapper extends StatefulWidget {
 }
 
 class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
-  final firebaseUser = null;
   bool _timerDone = false;
   bool _initialised = false;
+  bool _noData = false;
 
   @override
   Widget build(BuildContext context) {
-    final firebaseUser = context.watch<auth.User>();
     if (!_timerDone) {
       return loadingScreen();
     }
 
-    if (firebaseUser == null) {
-      return AuthScreen();
-    }
-
-    waitForUser();
     if (_initialised) {
       return MainMenu();
     } else {
+      waitForGetUser();
       return loadingScreen();
     }
   }
@@ -148,10 +112,13 @@ class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
     });
   }
 
-  waitForUser() async {
-    await MyAppState.dBhandler.setCurrentUser();
+  waitForGetUser() async {
+    User user = MyAppState.dBhandler.createNewUser("TEMP", "12345");
+    await MyAppState.dBhandler.putUserinDB(user);
+
     setState(() {
-      _initialised = true;
+        _initialised = true;
     });
   }
+
 }

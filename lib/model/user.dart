@@ -12,7 +12,7 @@ class User extends HiveObject {
   @HiveField(0)
   DateTime lastOnlineTimestamp;
   @HiveField(1)
-  String email;
+  String playerName;
   @HiveField(2)
   String userID;
   @HiveField(4)
@@ -30,7 +30,7 @@ class User extends HiveObject {
 
   User(
       {this.lastOnlineTimestamp,
-      this.email = '',
+      this.playerName = '',
       this.userID = '',
       this.active = false,
       this.daily,

@@ -1,8 +1,4 @@
 import 'dart:convert';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flame/flame.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -43,23 +39,11 @@ class DBHandler {
     }
   }
 
-  initImages() async {
-    await Flame.images.loadAll(<String>[
-      'player/1.png',
-      'player/2.png',
-      'player/3.png',
-      'player/4.png',
-      'player/5.png',
-      'player/6.png',
-      'player/7.png',
-      'player/playerShooting.png'
-    ]);
-  }
 
-  Future<User> createAndUpdateUser(String email, String uid) async {
+  createNewUser(String playerName, String uid)  {
     User user = User(
       lastOnlineTimestamp: DateTime.now(),
-      email: email,
+      playerName: playerName,
       userID: uid,
       active: true,
       daily: new DailyReward(lastRewardTimestamp: defaultTime()),
@@ -83,20 +67,17 @@ class DBHandler {
       experience:
           new Experience(level: 1, experience: 0, expModifier: 1, expCap: 150),
     );
+    return(user);
 
-    final box = await Hive.openBox<User>('currentUser');
-    await box.put("currentUser", user);
-    currentUser = user;
-    return user;
   }
 
-  updateUser(User user) async {
+  putUserinDB(User user) async {
     final box = await Hive.openBox<User>('currentUser');
     await box.put("currentUser", user);
     currentUser = user;
   }
 
-  updateCurrentUser() async {
+  saveUser() async {
     this.currentUser.save();
     //FireStoreUtils.updateCurrentUser(currentUser);
   }
@@ -106,11 +87,16 @@ class DBHandler {
     return box.get("currentUser");
   }
 
-  setCurrentUser() async {
+  getCurrentUser() async {
     final box = await Hive.openBox<User>('currentUser');
+
+    if(box == null) return false;
+
     currentUser = box.get("currentUser");
     currentUser.updateUser();
     convertInventory();
+
+    return true;
   }
 
   clearDb() async {
@@ -172,7 +158,3 @@ class DBHandler {
   }
 }
 
-class FireStoreUtils {
-  static FirebaseFirestore firestore = FirebaseFirestore.instance;
-  Reference storage = FirebaseStorage.instance.ref();
-}

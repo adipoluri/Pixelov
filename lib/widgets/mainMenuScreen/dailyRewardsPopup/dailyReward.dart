@@ -29,7 +29,7 @@ class DailyReward extends HiveObject {
   void collect() {
     this.collectedToday = true;
     setTimeStamp();
-    MyAppState.dBhandler.updateUser(MyAppState.dBhandler.currentUser);
+    MyAppState.dBhandler.putUserinDB(MyAppState.dBhandler.currentUser);
   }
 
   void debugResetDaily() {
